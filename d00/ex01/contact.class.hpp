@@ -7,6 +7,9 @@
 class Contact
 {
 public:
+
+	std::string tmpStr[FILED_STATIC_LEN];
+
 	// Default Constructor
 	Contact();
 

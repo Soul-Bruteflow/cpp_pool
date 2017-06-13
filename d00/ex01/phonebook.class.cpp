@@ -32,43 +32,45 @@ void Phonebook::addContact(void)
 				  << "to add a contact to the Phonebookinator 2000"
 				  << std::endl;
 		std::cin.ignore(INT_MAX, '\n');
-		for (int i = 0; i < 11; i++)
+		for (int i = 0; i < 11 - 10; i++)
 			setContactFields(i);
 		conIndex++;
 	}
 }
 
-//void Phonebook::get_contacts(void)
-//{
-//	std::cout << "|"
-//			  << "Index"
-//			  << std::setw(5)
-//			  << "|"
-//			  << "First name"
-//			  << "|"
-//			  << "Last name"
-//			  << std::setw(2)
-//			  << "|"
-//			  << "Nickname"
-//			  << std::setw(3)
-//			  << "|"
-//			  << std::endl;
-//	for (int i = 0; i < con_index; i++)
-//	{
-//		for (int j = 0; j <= 3; j++)
-//		{
-//			tmp_data[0] = contact_list[i].get_field(filed_name[j][0]);
-//			if (tmp_data->length() >= 10)
-//			std::cout
-//					<< truncate(contact_list[i].get_field(filed_name[j][0]), 9, true);
-//			else
-//				std::cout << contact_list[i].get_field(filed_name[j][0]);
-//			std::cout << std::setw(10 - (int)tmp_data->length())
-//					  << "|";
-//		}
-//		std::cout << std::endl;
-//	}
-//}
+void Phonebook::setAndTruncateShortFields(int conInd)
+{
+	for (int i = 0; i < 3; i++)
+		tmpShortFields[i][0] = truncate(_contactList[conInd].returnDataFromFiledByIndex(i), 9, true);
+}
+
+void Phonebook::setAndPrintAllShortFields(void)
+{
+	if (conIndex <= 0)
+		return;
+	for (int i = 0; i < conIndex; i++)
+	{
+		setAndTruncateShortFields(i);
+		printShortFields(i);
+	}
+}
+
+void Phonebook::printShortFields(int i) const
+{
+	std::cout
+			<< std::setw(10)
+			<< i
+			<< "|";
+	for (int j = 0; j < 3; j++)
+	{
+		std::cout
+				<< std::setw(10)
+				<< tmpShortFields[j][0];
+		if (j < 2)
+			std::cout << "|";
+	}
+	std::cout << std::endl;
+}
 
 std::string Phonebook::truncate(std::string str, size_t width, bool show_dots) const
 {

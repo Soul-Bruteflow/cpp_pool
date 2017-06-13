@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 //#include <string>
 #include "main.hpp"
 #include "defines.hpp"
@@ -10,18 +11,31 @@ void printWellcome(void)
 			  << std::endl << std::endl;
 }
 
-//void printTableHead(void) const
-//{
-//	std::cout << "123456789"
-//			  << std::endl << std::endl;
-//}
+void printTableHead(void)
+{
+	std::cout
+			<< std::setw(10)
+			<< "index"
+			<< "|"
+			<< "first name"
+			<< "|"
+			<< std::setw(10)
+			<< "last name"
+			<< "|"
+			<< std::setw(10)
+			<< "nickname"
+			<< std::endl;
+}
 
 std::string commandPromtRead(std::string *command)
 {
-	std::cout << "Enter one of the following comands: "
-			  << "ADD, SEARCH, EXIT"
-			  << std::endl;
-	std::cout << "Input and hit enter: ";
+	std::cout
+			<< std::endl
+			<< "Enter one of the following comands: "
+			<< "ADD, SEARCH, EXIT"
+			<< std::endl
+			<< "Input and hit enter: "
+			<< std::endl;
 	std::cin  >> command[0];
 	return (command[0]);
 }

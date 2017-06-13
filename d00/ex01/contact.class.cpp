@@ -14,7 +14,8 @@ bool Contact::addNewDataToFieldByIndex(int field_index, std::string field_data)
 {
 	if (field_index < 0 || field_index > MAX_FIELDS)
 		return (false);
-	_contactFields[field_index][0] = field_data;
+	tmpStr[0] = field_data;
+	_contactFields[field_index][0] = tmpStr[0];
 	return (true);
 }
 

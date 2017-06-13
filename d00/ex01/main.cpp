@@ -30,7 +30,13 @@ int main(void)
 		}
 		else if (book.tmpCommand[0] == "SEARCH")
 		{
-//			book.get_contacts();
+			if (book.conIndex > 0)
+			{
+				printTableHead();
+				book.setAndPrintAllShortFields();
+			}
+			else
+				std::cout << "Contact list empty. Add contact first." << std::endl;
 			continue;
 		}
 		else if (book.tmpCommand[0] == "EXIT")
