@@ -28,7 +28,7 @@ public:
 	//Accessor functions
 	std::string truncate(std::string str, size_t width, bool show_dots) const;
 	void printShortFields(int i) const;
-	void getIndexPrintLong(int i);
+	void getIndexPrintLong(std::string index);
 
 	//Mutator functions
 	void setContactFields(int i);

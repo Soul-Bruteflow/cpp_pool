@@ -1,5 +1,7 @@
 #include "phonebook.class.hpp"
 #include "defines.hpp"
+#include "main.hpp"
+#include <sstream>
 
 Phonebook::Phonebook(void)
 	: isRunning (true), conIndex (0)
@@ -16,15 +18,15 @@ void Phonebook::setContactFields(int i)
 {
 	std::cout << "Enter " << fieldLabels_[i][0] << ": ";
 	getline(std::cin, tmpFieldData[0]);
-	_contactList[conIndex].addNewDataToFieldByIndex(conIndex, tmpFieldData[0]);
+	_contactList[conIndex].addNewDataToFieldByIndex(i, tmpFieldData[0]);
 }
 
 void Phonebook::addContact(void)
 {
-	if (conIndex > MAX_CONTACTS)
+	if (conIndex >= MAX_CONTACTS)
 	{
 		std::cout << "Sorry max contact count reached."
-				  << std::endl << std::endl;;
+				  << std::endl;
 		return;
 	}
 	else
@@ -34,6 +36,7 @@ void Phonebook::addContact(void)
 			setContactFields(i);
 		conIndex++;
 	}
+	slotsLeft(conIndex);
 }
 
 void Phonebook::setAndTruncateShortFields(int conInd)
@@ -68,9 +71,11 @@ void Phonebook::printShortFields(int i) const
 	std::cout << std::endl;
 }
 
-void Phonebook::getIndexPrintLong(int i)
+void Phonebook::getIndexPrintLong(std::string index)
 {
-	if (i < 0 || i >= conIndex)
+	int i = 0;
+	std::istringstream convert(index);
+	if ((!(convert >> i)) || i < 0 || i >= conIndex)
 	{
 		std::cout << "No such index, try again."
 				<< std::endl;

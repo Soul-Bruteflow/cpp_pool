@@ -15,7 +15,7 @@
 
 int main(void)
 {
-	int index = 0;
+	std::string index;
 	Phonebook book;
 
 	printWellcome();
@@ -25,7 +25,6 @@ int main(void)
 		if (book.tmpCommand[0] == "ADD")
 		{
 			book.addContact();
-			slotsLeft(book.conIndex);
 			continue;
 		}
 		else if (book.tmpCommand[0] == "SEARCH")
