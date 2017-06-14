@@ -15,6 +15,7 @@
 
 int main(void)
 {
+	int index = 0;
 	Phonebook book;
 
 	printWellcome();
@@ -23,7 +24,6 @@ int main(void)
 		commandPromtRead(book.tmpCommand);
 		if (book.tmpCommand[0] == "ADD")
 		{
-			commandEcho(book.tmpCommand);
 			book.addContact();
 			slotsLeft(book.conIndex);
 			continue;
@@ -34,6 +34,11 @@ int main(void)
 			{
 				printTableHead();
 				book.setAndPrintAllShortFields();
+				std::cout << std::endl
+						  << "Index: ";
+				std::cin >> index;
+				std::cout << std::endl;
+				book.getIndexPrintLong(index);
 			}
 			else
 				std::cout << "Contact list empty. Add contact first." << std::endl;
@@ -43,8 +48,8 @@ int main(void)
 			book.isRunning = false;
 		else
 		{
-			std::cout << "There is no such command. Please try again.";
-			std::cout << std::endl << std::endl;;
+			std::cout << "There is no such command. Please try again."
+					  << std::endl;
 			continue;
 		}
 	}
