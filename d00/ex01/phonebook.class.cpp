@@ -75,7 +75,7 @@ void Phonebook::getIndexPrintLong(std::string index)
 {
 	int i = 0;
 	std::istringstream convert(index);
-	if ((!(convert >> i)) || i < 0 || i >= conIndex)
+	if ((!(convert >> i)) || i < 0 || i >= conIndex || index[0] == '-' || index[0] == '+')
 	{
 		std::cout << "No such index, try again."
 				<< std::endl;
