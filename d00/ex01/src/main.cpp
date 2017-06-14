@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.class.hpp"
+#include "Phonebook.hpp"
 #include "main.hpp"
+#include <iostream>
+#include <string>
 
 int main(void)
 {

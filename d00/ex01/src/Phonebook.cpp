@@ -1,4 +1,4 @@
-#include "phonebook.class.hpp"
+#include "Phonebook.hpp"
 #include "defines.hpp"
 #include "main.hpp"
 #include <sstream>
@@ -6,12 +6,12 @@
 Phonebook::Phonebook(void)
 	: isRunning (true), conIndex (0)
 {
-
+    return;
 }
 
 Phonebook::~Phonebook(void)
 {
-
+    return;
 }
 
 void Phonebook::setContactFields(int i)

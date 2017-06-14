@@ -1,5 +1,5 @@
-#ifndef D01_E01_MAIN_HPP
-#define D01_E01_MAIN_HPP
+#ifndef _MAIN_HPP
+#define _MAIN_HPP
 
 void printWellcome(void);
 void slotsLeft(int con_index);

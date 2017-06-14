@@ -1,13 +1,13 @@
-#include "contact.class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact()
 {
-
+    return;
 }
 
 Contact::~Contact()
 {
-
+    return;
 }
 
 bool Contact::addNewDataToFieldByIndex(int field_index, std::string field_data)
