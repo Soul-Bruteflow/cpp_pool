@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type)
-		: _name(name)
-		, _type(type)
+Zombie::Zombie(std::string zombieName, std::string zombieType)
+		: _zombieName(zombieName)
+		, _zombieType(zombieType)
 {
 	std::cout << "Zombie CREATED."
 			  << std::endl;
@@ -18,9 +18,9 @@ Zombie::~Zombie(void) {
 
 void Zombie::announce(void) {
 	std::cout << "<"
-			  << _name
+			  << _zombieName
 			  << " ("
-			  << _type
+			  << _zombieType
 			  << ")> "
 			  << "Braiiiiiiinnnssss..."
 			  << std::endl;
