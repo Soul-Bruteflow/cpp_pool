@@ -8,4 +8,4 @@ file(GLOB SOURCES ./*.cpp)
 
 add_executable(PROJECT_NAME ${SOURCES})
 
-target_compile_options(PROJECT_NAME PUBLIC -I ./inc/*.hpp)
+target_compile_options(PROJECT_NAME PUBLIC -I ./inc/*.hpp -Wall -Wextra -Werror)
