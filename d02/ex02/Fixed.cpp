@@ -6,7 +6,7 @@
 #include <cmath>
 #include "Fixed.hpp"
 
-///* ---- Canonical form ---- *///
+///* --------------------------- Canonical form --------------------------- *///
 /* Default constructor */
 Fixed::Fixed(){
 	std::cout << "Default constructor called" << std::endl;
@@ -31,8 +31,7 @@ Fixed &Fixed::operator=(Fixed const &rhs){
 	return *this;
 }
 
-
-///* ---- Additional constructors ---- *///
+///* ---------------------- Additional constructors ----------------------- *///
 /* From int to fixed point */
 Fixed::Fixed(int const n)
 		:_fpVal(n * (1 << _fbits))
@@ -48,9 +47,7 @@ Fixed::Fixed(float const n)
 	return;
 }
 
-
-///* ---- Public methods ---- *///
-
+///* --------------------------- Public methods --------------------------- *///
 int Fixed::getRawBits() const{
 	return _fpVal;
 }
@@ -64,16 +61,15 @@ int Fixed::toInt(void) const{
 	return _fpVal / (1 << _fbits);
 }
 
-
-///* ---- Public method operator overloads ---- *///
-
+///* ------------------ Public method operators overload ------------------ *///
+/* Comparison operators overload */
 bool Fixed::operator==(const Fixed & rhs){
 	return _fpVal == rhs.getRawBits();
 }
 bool Fixed::operator!=(const Fixed & rhs){
 	return !Fixed::operator==(rhs);
 }
-bool Fixed::operator< (const Fixed &rhs){
+bool Fixed::operator< (const Fixed & rhs){
 	return _fpVal < rhs.getRawBits();
 }
 bool Fixed::operator> (const Fixed & rhs){
@@ -86,9 +82,24 @@ bool Fixed::operator>=(const Fixed & rhs){
 	return !Fixed::operator< (rhs);
 }
 
+/* Binary arithmetic operators overload */
+Fixed Fixed::operator+(const Fixed & rhs){
+	return *this += rhs;
+}
+Fixed & Fixed::operator+=(const Fixed & rhs){
+	*this = Fixed(this->toFloat() + rhs.toFloat());
+	return *this;
+}
+Fixed Fixed::operator-(const Fixed & rhs){
+	return *this -= rhs;
+}
+Fixed & Fixed::operator-=(const Fixed & rhs){
+	*this = Fixed(this->toFloat() - rhs.toFloat());
+	return *this;
+}
 
-///* ---- Non-member functions ---- *///
-
+///* ------------------------ Non-member functions ------------------------ *///
+/* Stream operator overloads */
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
 	o << rhs.toFloat();
