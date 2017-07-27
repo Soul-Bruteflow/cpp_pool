@@ -38,21 +38,18 @@ public:
 	Fixed & operator+=(const Fixed & rhs);
 	Fixed operator-(const Fixed & rhs);
 	Fixed & operator-=(const Fixed & rhs);
-	bool operator*(const Fixed & rhs);
-	bool operator/(const Fixed & rhs);
+	Fixed operator*(const Fixed & rhs);
+	Fixed & operator*=(const Fixed & rhs);
+	Fixed operator/(const Fixed & rhs);
+	Fixed & operator/=(const Fixed & rhs);
 
 	/* Unary arithmetic operators overload */
-	// Pre-increment
-	bool operator++();
-	// Post-increment
-	bool operator++(int);
-
+	Fixed & operator++();
+	Fixed operator++(int);
 	/// Decrements the fixed point value from the smallest
 	/// representable ε such as 1 + ε > 1.
-	// Pre-decrement
-	bool operator--();
-	// Post-decrement
-	bool operator--(int);
+	Fixed & operator--();
+	Fixed operator--(int);
 
 ///* ------------------------------- Private ------------------------------ *///
 private:
@@ -66,5 +63,11 @@ private:
 ///* ------------------------ Non-member functions ------------------------ *///
 /* Stream operators overload */
 std::ostream & operator<<(std::ostream & o, const Fixed & rhs);
+
+/* Min max */
+Fixed & min(Fixed & lhs, Fixed & rhs);
+const Fixed & min(const Fixed & lhs, const Fixed & rhs);
+Fixed & max(Fixed & lhs, Fixed & rhs);
+const Fixed & max(const Fixed & lhs, const Fixed & rhs);
 
 #endif //D02_E00_FIXED_HPP

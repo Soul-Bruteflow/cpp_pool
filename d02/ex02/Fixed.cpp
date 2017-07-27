@@ -9,23 +9,23 @@
 ///* --------------------------- Canonical form --------------------------- *///
 /* Default constructor */
 Fixed::Fixed(){
-	std::cout << "Default constructor called" << std::endl;
+//	std::cout << "Default constructor called" << std::endl;
 	return;
 }
 /* Copy constructor */
 Fixed::Fixed(Fixed const &src){
-	std::cout << "Copy constructor called" << std::endl;
+//	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 	return;
 }
 /* Default destructor */
 Fixed::~Fixed(){
-	std::cout << "Destructor called" << std::endl;
+//	std::cout << "Destructor called" << std::endl;
 	return;
 }
 /* Assignment operator overload (Update) */
 Fixed &Fixed::operator=(Fixed const &rhs){
-	std::cout << "Assignation operator called" << std::endl;
+//	std::cout << "Assignation operator called" << std::endl;
 	/* this->data = rhs.data */
 	_fpVal = rhs.getRawBits();
 	return *this;
@@ -36,14 +36,14 @@ Fixed &Fixed::operator=(Fixed const &rhs){
 Fixed::Fixed(int const n)
 		:_fpVal(n * (1 << _fbits))
 {
-	std::cout << "Int constructor called" << std::endl;
+//	std::cout << "Int constructor called" << std::endl;
 	return;
 }
 /* From float to fixed point */
 Fixed::Fixed(float const n)
 		: _fpVal(int(roundf(n * (1 << _fbits))))
 {
-	std::cout << "Float constructor called" << std::endl;
+//	std::cout << "Float constructor called" << std::endl;
 	return;
 }
 
@@ -83,6 +83,7 @@ bool Fixed::operator>=(const Fixed & rhs){
 }
 
 /* Binary arithmetic operators overload */
+// Plus
 Fixed Fixed::operator+(const Fixed & rhs){
 	return *this += rhs;
 }
@@ -90,12 +91,55 @@ Fixed & Fixed::operator+=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() + rhs.toFloat());
 	return *this;
 }
+// Minus
 Fixed Fixed::operator-(const Fixed & rhs){
 	return *this -= rhs;
 }
 Fixed & Fixed::operator-=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() - rhs.toFloat());
 	return *this;
+}
+// Multiply
+Fixed Fixed::operator*(const Fixed & rhs){
+	return *this *= rhs;
+}
+Fixed & Fixed::operator*=(const Fixed & rhs){
+	*this = Fixed(this->toFloat() * rhs.toFloat());
+	return *this;
+}
+// Divide
+Fixed Fixed::operator/(const Fixed & rhs){
+	return *this /= rhs;
+}
+Fixed & Fixed::operator/=(const Fixed & rhs){
+	*this = Fixed(this->toFloat() / rhs.toFloat());
+	return *this;
+}
+
+/* Unary arithmetic operators overload */
+// Increment
+Fixed & Fixed::operator++()
+{
+	++(this->_fpVal);
+	return *this;
+}
+Fixed Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	operator++();
+	return tmp;
+}
+// Decrement
+Fixed & Fixed::operator--()
+{
+	--(this->_fpVal);
+	return *this;
+}
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	operator--();
+	return tmp;
 }
 
 ///* ------------------------ Non-member functions ------------------------ *///
@@ -104,4 +148,19 @@ std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
 	o << rhs.toFloat();
 	return o;
+}
+
+/* Min max */
+Fixed & min(Fixed & lhs, Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
+}
+const Fixed & min(const Fixed & lhs, const Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
+}
+
+Fixed & max(Fixed & lhs, Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
+}
+const Fixed & max(const Fixed & lhs, const Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
 }

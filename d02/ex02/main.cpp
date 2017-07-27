@@ -7,10 +7,12 @@
 int main(void)
 {
 	Fixed	a;
-	Fixed 	b( 10 );
+	Fixed 	b( 2 );
 	Fixed  	c( 42.42f );
 	Fixed	d( b );
 	Fixed  	e( 15 );
+	Fixed   f(Fixed(5.05f));
+	Fixed	g;
 	a = Fixed( 1234.4321f );
 
 	std::cout << "a is " << a << std::endl;
@@ -31,6 +33,30 @@ int main(void)
 	std::cout << "a >= c = " << (a >= c) << std::endl;
 	std::cout << "a == c = " << (a == c) << std::endl;
 	std::cout << "a != c = " << (a != c) << std::endl;
+
+
 	std::cout << "b - e = " << (b - e) << std::endl;
+	e = 15;
+	b = 2;
+	std::cout << "f * b " << (f * b) << std::endl;
+	e = 15;
+	b = 2;
+	std::cout << "e / b " << (e / b) << std::endl;
+
+	std::cout << g << std::endl;
+	std::cout << ++g << std::endl;
+	std::cout << g << std::endl;
+	std::cout << g++ << std::endl;
+	std::cout << g << std::endl;
+
+	std::cout << g << std::endl;
+	std::cout << --g << std::endl;
+	std::cout << g << std::endl;
+	std::cout << g-- << std::endl;
+	std::cout << g << std::endl;
+
+	e = 15;
+	b = 2;
+	std::cout << min(e, b) << std::endl;
 	return 0;
 }
