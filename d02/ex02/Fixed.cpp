@@ -8,42 +8,31 @@
 
 ///* --------------------------- Canonical form --------------------------- *///
 /* Default constructor */
-Fixed::Fixed(){
-//	std::cout << "Default constructor called" << std::endl;
+Fixed::Fixed() :_fpVal(0){
 	return;
 }
 /* Copy constructor */
 Fixed::Fixed(Fixed const &src){
-//	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 	return;
 }
 /* Default destructor */
 Fixed::~Fixed(){
-//	std::cout << "Destructor called" << std::endl;
 	return;
 }
 /* Assignment operator overload (Update) */
 Fixed &Fixed::operator=(Fixed const &rhs){
-//	std::cout << "Assignation operator called" << std::endl;
-	/* this->data = rhs.data */
 	_fpVal = rhs.getRawBits();
 	return *this;
 }
 
 ///* ---------------------- Additional constructors ----------------------- *///
 /* From int to fixed point */
-Fixed::Fixed(int const n)
-		:_fpVal(n * (1 << _fbits))
-{
-//	std::cout << "Int constructor called" << std::endl;
+Fixed::Fixed(int const n) :_fpVal(n * (1 << _fbits)){
 	return;
 }
 /* From float to fixed point */
-Fixed::Fixed(float const n)
-		: _fpVal(int(roundf(n * (1 << _fbits))))
-{
-//	std::cout << "Float constructor called" << std::endl;
+Fixed::Fixed(float const n) : _fpVal(int(roundf(n * (1 << _fbits)))){
 	return;
 }
 
@@ -87,7 +76,7 @@ bool Fixed::operator>=(const Fixed & rhs){
 Fixed Fixed::operator+(const Fixed & rhs){
 	return *this += rhs;
 }
-Fixed & Fixed::operator+=(const Fixed & rhs){
+Fixed &Fixed::operator+=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() + rhs.toFloat());
 	return *this;
 }
@@ -95,7 +84,7 @@ Fixed & Fixed::operator+=(const Fixed & rhs){
 Fixed Fixed::operator-(const Fixed & rhs){
 	return *this -= rhs;
 }
-Fixed & Fixed::operator-=(const Fixed & rhs){
+Fixed &Fixed::operator-=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() - rhs.toFloat());
 	return *this;
 }
@@ -103,7 +92,7 @@ Fixed & Fixed::operator-=(const Fixed & rhs){
 Fixed Fixed::operator*(const Fixed & rhs){
 	return *this *= rhs;
 }
-Fixed & Fixed::operator*=(const Fixed & rhs){
+Fixed &Fixed::operator*=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() * rhs.toFloat());
 	return *this;
 }
@@ -111,14 +100,14 @@ Fixed & Fixed::operator*=(const Fixed & rhs){
 Fixed Fixed::operator/(const Fixed & rhs){
 	return *this /= rhs;
 }
-Fixed & Fixed::operator/=(const Fixed & rhs){
+Fixed &Fixed::operator/=(const Fixed & rhs){
 	*this = Fixed(this->toFloat() / rhs.toFloat());
 	return *this;
 }
 
 /* Unary arithmetic operators overload */
 // Increment
-Fixed & Fixed::operator++()
+Fixed &Fixed::operator++()
 {
 	++(this->_fpVal);
 	return *this;
@@ -130,7 +119,7 @@ Fixed Fixed::operator++(int)
 	return tmp;
 }
 // Decrement
-Fixed & Fixed::operator--()
+Fixed &Fixed::operator--()
 {
 	--(this->_fpVal);
 	return *this;
@@ -142,25 +131,25 @@ Fixed Fixed::operator--(int)
 	return tmp;
 }
 
+///* --------------------------- Static methods --------------------------- *///
+/* Min max */
+Fixed &Fixed::min(Fixed & lhs, Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
+}
+Fixed &Fixed::max(Fixed & lhs, Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
+}
+const Fixed &Fixed::min(const Fixed & lhs, const Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
+}
+const Fixed &Fixed::max(const Fixed & lhs, const Fixed & rhs){
+	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
+}
+
 ///* ------------------------ Non-member functions ------------------------ *///
 /* Stream operator overloads */
-std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
+std::ostream &operator<<(std::ostream & o, Fixed const & rhs)
 {
 	o << rhs.toFloat();
 	return o;
-}
-
-/* Min max */
-Fixed & min(Fixed & lhs, Fixed & rhs){
-	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
-}
-const Fixed & min(const Fixed & lhs, const Fixed & rhs){
-	return (((lhs.toFloat() > rhs.toFloat()) ? rhs : lhs));
-}
-
-Fixed & max(Fixed & lhs, Fixed & rhs){
-	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
-}
-const Fixed & max(const Fixed & lhs, const Fixed & rhs){
-	return (((lhs.toFloat() > rhs.toFloat()) ? lhs : rhs));
 }

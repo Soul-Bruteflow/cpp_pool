@@ -57,6 +57,6 @@ int main(void)
 
 	e = 15;
 	b = 2;
-	std::cout << min(e, b) << std::endl;
+	std::cout << Fixed::min(e, b) << std::endl;
 	return 0;
 }
