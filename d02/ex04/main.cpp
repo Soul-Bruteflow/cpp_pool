@@ -5,9 +5,53 @@
 #include <curses.h>
 #include "Fixed.hpp"
 
-int parseSum();
-int parseProduct();
+bool parseSum(std::string &toParse, std::string::iterator &i, int &result);
+bool parseProduct(std::string &toParse, std::string::iterator &i, int &result);
 bool parseFactor(std::string &toParse, std::string::iterator &i, int &result);
+
+bool parseSum(std::string &toParse, std::string::iterator &i, int &result)
+{
+	int lhs;
+	int rhs;
+
+	// Assign left hand side value
+	parseProduct(toParse, i, lhs);
+	while (*i == '+')
+	{
+		//Skipp multiply sign
+		++i;
+
+		//Assign right hand side value
+		parseProduct(toParse, i, rhs);
+
+		// Assign and return value
+		result = lhs + rhs;
+		return true;
+	}
+	return false;
+}
+
+bool parseProduct(std::string &toParse, std::string::iterator &i, int &result)
+{
+	int lhs;
+	int rhs;
+
+	// Assign left hand side value
+	parseFactor(toParse, i, lhs);
+	while (*i == '*')
+	{
+		//Skipp multiply sign
+		++i;
+
+		//Assign right hand side value
+		parseFactor(toParse, i, rhs);
+
+		// Assign and return value
+		result = lhs * rhs;
+		return true;
+	}
+	return false;
+}
 
 bool parseFactor(std::string &toParse, std::string::iterator &i, int &result) {
 
@@ -29,8 +73,15 @@ bool parseFactor(std::string &toParse, std::string::iterator &i, int &result) {
 	{
 		if (*i < '0' || *i > '9')
 		{
-			i++;
-			return true;
+			if (*i == '*' || *i == '+' || *i == '-' || *i == '/' || *i == ' ')
+				return true;
+			else
+			{
+				std::cerr << "Forbidden symbol found: " << *i << std::endl;
+				std::cerr << "Allowed symbols: 0-9, *, /, -, +, and space." << std::endl;
+				return false;
+			}
+
 		}
 		result *= 10;
 		result += *i - '0';
@@ -48,16 +99,16 @@ int main(int argc, char *argv[])
 {
 	std::string 			toParse;
 	std::string::iterator 	iParse;
-//	bool 					check;
+	bool 					isParsed;
 	int						result;
 
 	if (argc == 2)
 	{
 		toParse = argv[1];
 		iParse = toParse.begin();
-
-		parseFactor(toParse, iParse, result);
-		std::cout << result << std::endl;
+		isParsed = parseSum(toParse, iParse, result);
+		if (isParsed)
+			std::cout << result << std::endl;
 	}
 	else
 		std::cerr << "Usage: ./eval_expr \"expression\"" << std::endl;

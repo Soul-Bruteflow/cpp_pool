@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.7)
 
-project(d02_e02)
+project(d02_e04)
+
+set(PROJECT_NAME d02_e04)
 
 set(CMAKE_CXX_STANDARD 98)
 
