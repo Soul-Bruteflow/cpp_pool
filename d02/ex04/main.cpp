@@ -386,7 +386,7 @@ int main()
 	// " 3+5 / 2 " = 5
 
 	// my code evalute this to 2, while it's expected to be 7
-	expression = "-15*2+4*5";
+	expression = "15*2+4*5";
 //	calculate(expression);
 	std::cout << expression << " -> "
 			  << calculate(expression) << std::endl;
