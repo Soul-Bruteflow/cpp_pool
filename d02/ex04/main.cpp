@@ -53,7 +53,8 @@
 //	return false;
 //}
 //
-//bool parseFactor(std::string &toParse, std::string::iterator &i, int &result) {
+//bool parseFactor(std::string &toParse, std::string::iterator &i, int &result)
+//{
 //
 //	bool negative = false;
 //
@@ -136,7 +137,8 @@ bool isValidSymbol(std::string str)
 	for (i = str.begin(); i < str.end(); i++)
 	{
 		if (!(*i == '*' || *i == '+' || *i == '-' || *i == '/'
-			|| *i == '(' || *i == ')' || (*i <= '9' && *i >= '0')))
+			|| *i == '(' || *i == ')' || (*i <= '9' && *i >= '0')
+				|| *i == '.'))
 			return false;
 	}
 	return true;
@@ -167,12 +169,16 @@ void tokenize(const std::string& str, std::list<std::string>& tokens)
 	std::string num;
 	int N = str.size();
 
-	for (int i = 0; i < N; ++i) {
+	for (int i = 0; i < N; ++i)
+	{
 		char c = str[i];
-		if (isdigit(c)) {
+		if (isdigit(c))
+		{
 			num += c;
-		} else {
-			if (!num.empty()) {
+		} else
+		{
+			if (!num.empty())
+			{
 				tokens.push_back(num);
 				num.clear();
 			}
@@ -206,10 +212,10 @@ public:
 	Calculator(const std::string& expression);
 
 	void next();
-	int exp();
-	int term();
-	int factor();
-	int toInt(const std::string& s);
+	double exp();
+	double term();
+	double factor();
+	bool toInt(std::string toParse, double &result, bool isNegative);
 
 private:
 	std::list<std::string> mTokens;
@@ -223,7 +229,7 @@ Calculator::Calculator(const std::string& expression)
 	if (!tmp)
 	{
 		std::cerr << "Forbidden symbol found." << std::endl;
-		std::cerr << "Allowed symbols: 0-9, *, /, -, +, (, ) and space." << std::endl;
+		std::cerr << "Allowed symbols: 0-9, ., *, /, -, +, (, ) and space." << std::endl;
 	}
 	// std::cout << s << std::endl;
 
@@ -245,8 +251,7 @@ Calculator::Calculator(const std::string& expression)
 	mCurrent = mTokens.front();
 }
 
-void
-Calculator::next()
+void Calculator::next()
 {
 	mTokens.pop_front();
 
@@ -257,10 +262,9 @@ Calculator::next()
 	}
 }
 
-int
-Calculator::exp()
+double Calculator::exp()
 {
-	int result = term();
+	double result = term();
 	while (mCurrent == "+" || mCurrent == "-") {
 		if (mCurrent == "+") {
 			next();
@@ -274,10 +278,9 @@ Calculator::exp()
 	return result;
 }
 
-int
-Calculator::term()
+double Calculator::term()
 {
-	int result = factor();
+	double result = factor();
 	while (mCurrent == "*" || mCurrent == "/") {
 		if (mCurrent == "*") {
 			next();
@@ -291,7 +294,7 @@ Calculator::term()
 			//
 			// But we need to deal with divide by 0
 			//
-			int denominator = factor();
+			double denominator = factor();
 			if (denominator != 0) {
 				result /= denominator;
 			} else {
@@ -302,42 +305,79 @@ Calculator::term()
 	return result;
 }
 
-int
-Calculator::factor()
+double Calculator::factor()
 {
-	int result;
+	double result;
 
-	if (mCurrent == "(") {
+	if (mCurrent == "(")
+	{
 		next();
 		result = exp();
 		next();
-	} else {
-		result = toInt(mCurrent);
-		next();
+	} else
+	{
+		if (mCurrent == "-")
+		{
+			next();
+			toInt(mCurrent, result, true);
+			next();
+		} else
+		{
+			toInt(mCurrent, result, false);
+			next();
+		}
 	}
 
 	return result;
 }
 
-int
-Calculator::toInt(const std::string& s)
+bool Calculator::toInt(std::string toParse, double &result, bool isNegative)
 {
-	std::stringstream ss;
-	ss << s;
-	int x;
-	ss >> x;
-	return x;
+	std::string::iterator i (toParse.begin());
+	bool negative = isNegative;
+
+	if (i == toParse.end())
+		return false;
+
+//	if (*i == '-')
+//	{
+//		negative = true;
+//		++i;
+//		if (i == toParse.end())
+//			return false;
+//	}
+
+	result = 0;
+	for (; i != toParse.end(); ++i)
+	{
+		if (*i < '0' || *i > '9')
+		{
+			if (*i == '*' || *i == '+' || *i == '-' || *i == '/' || *i == ' ')
+				return true;
+			else
+			{
+				std::cerr << "Forbidden symbol found: " << *i << std::endl;
+				std::cerr << "Allowed symbols: 0-9, *, /, -, +, and space." << std::endl;
+				return false;
+			}
+
+		}
+		result *= 10;
+		result += *i - '0';
+	}
+	if (negative)
+		result = -result;
+
+	return true;
 }
 
-int
-calculate(std::string s)
+double calculate(std::string s)
 {
 	Calculator calculator(s);
 	return calculator.exp();
 }
 
-int
-main()
+int main()
 {
 	std::string expression;
 
@@ -346,7 +386,7 @@ main()
 	// " 3+5 / 2 " = 5
 
 	// my code evalute this to 2, while it's expected to be 7
-	expression = "12*3+4*5";
+	expression = "-15*2+4*5";
 //	calculate(expression);
 	std::cout << expression << " -> "
 			  << calculate(expression) << std::endl;
