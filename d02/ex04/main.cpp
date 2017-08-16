@@ -216,6 +216,7 @@ public:
 	double term();
 	double factor();
 	bool toInt(std::string toParse, double &result, bool isNegative);
+	bool toFloat(std::string toParse, double &dot_result);
 
 private:
 	std::list<std::string> mTokens;
@@ -327,8 +328,46 @@ double Calculator::factor()
 			next();
 		}
 	}
+	if (mCurrent == ".")
+	{
+		double dot_result = 0;
+		next(); // consume "."
+		toFloat(mCurrent, dot_result);
+		result += dot_result;
+		next();
+	}
 
 	return result;
+}
+
+bool Calculator::toFloat(std::string toParse, double &dot_result)
+{
+	std::string::iterator i (toParse.begin());
+	double weight = 1;
+
+	if (i == toParse.end())
+		return false;
+
+	dot_result = 0;
+	for (; i != toParse.end(); ++i)
+	{
+		if (*i < '0' || *i > '9')
+		{
+			if (*i == '*' || *i == '+' || *i == '-' || *i == '/')
+				return true;
+			else
+			{
+				std::cerr << "Forbidden symbol found: " << *i << std::endl;
+				std::cerr << "Allowed symbols: 0-9, *, /, -, +, and space." << std::endl;
+				return false;
+			}
+
+		}
+		weight /= 10;
+		dot_result += (*i - '0') * weight;
+//		dot_result += scaled;
+	}
+	return true;
 }
 
 bool Calculator::toInt(std::string toParse, double &result, bool isNegative)
@@ -352,7 +391,7 @@ bool Calculator::toInt(std::string toParse, double &result, bool isNegative)
 	{
 		if (*i < '0' || *i > '9')
 		{
-			if (*i == '*' || *i == '+' || *i == '-' || *i == '/' || *i == ' ')
+			if (*i == '*' || *i == '+' || *i == '-' || *i == '/')
 				return true;
 			else
 			{
@@ -386,7 +425,7 @@ int main()
 	// " 3+5 / 2 " = 5
 
 	// my code evalute this to 2, while it's expected to be 7
-	expression = "15*2+4*5";
+	expression = "1.5*2+4*5";
 //	calculate(expression);
 	std::cout << expression << " -> "
 			  << calculate(expression) << std::endl;
