@@ -365,7 +365,6 @@ bool Calculator::toFloat(std::string toParse, double &dot_result)
 		}
 		weight /= 10;
 		dot_result += (*i - '0') * weight;
-//		dot_result += scaled;
 	}
 	return true;
 }
