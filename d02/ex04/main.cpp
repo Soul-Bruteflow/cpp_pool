@@ -133,6 +133,7 @@ std::string removeSpaces(const std::string &str)
 bool isValidSymbol(std::string str)
 {
 	std::string::iterator i (str.begin());
+	std::string::iterator j;
 
 	for (i = str.begin(); i < str.end(); i++)
 	{
@@ -140,6 +141,24 @@ bool isValidSymbol(std::string str)
 			|| *i == '(' || *i == ')' || (*i <= '9' && *i >= '0')
 				|| *i == '.'))
 			return false;
+		if (*i == '-')
+		{
+			if (i != str.end() && i + 1 == str.end())
+				return false;
+
+			j = i;
+			j++;
+
+//			bool tmp = std::isdigit(*j);
+//			std::cout << tmp;
+
+			if (( i == str.begin()
+				|| std::isdigit(*j)
+				|| *i + 1 == '('))
+				continue;
+			else
+				return false;
+		}
 	}
 	return true;
 }
@@ -231,6 +250,7 @@ Calculator::Calculator(const std::string& expression)
 	{
 		std::cerr << "Forbidden symbol found." << std::endl;
 		std::cerr << "Allowed symbols: 0-9, ., *, /, -, +, (, ) and space." << std::endl;
+		exit (1);
 	}
 	// std::cout << s << std::endl;
 
@@ -424,7 +444,7 @@ int main()
 	// " 3+5 / 2 " = 5
 
 	// my code evalute this to 2, while it's expected to be 7
-	expression = "1.5*2+4*5";
+	expression = "-1*2+4*5";
 //	calculate(expression);
 	std::cout << expression << " -> "
 			  << calculate(expression) << std::endl;
