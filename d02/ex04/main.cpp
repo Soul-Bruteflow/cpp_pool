@@ -134,6 +134,7 @@ bool isValidSymbol(std::string str)
 {
 	std::string::iterator i (str.begin());
 	std::string::iterator j;
+	std::string::iterator k;
 
 	for (i = str.begin(); i < str.end(); i++)
 	{
@@ -141,20 +142,30 @@ bool isValidSymbol(std::string str)
 			|| *i == '(' || *i == ')' || (*i <= '9' && *i >= '0')
 				|| *i == '.'))
 			return false;
-		if (*i == '-')
+//		if (*i == '-')
+//		{
+//
+//			j = i;
+//			j++;
+//
+//			if (( i == str.begin() || std::isdigit(*j) || *i + 1 == '('))
+//				continue;
+//			else
+//				return false;
+//		}
+		if (*i == '*' || *i == '+' || *i == '-' || *i == '/')
 		{
+			if (i == str.begin())
+				return false;
+
 			if (i != str.end() && i + 1 == str.end())
 				return false;
 
 			j = i;
-			j++;
-
-//			bool tmp = std::isdigit(*j);
-//			std::cout << tmp;
-
-			if (( i == str.begin()
-				|| std::isdigit(*j)
-				|| *i + 1 == '('))
+			k = i;
+			k++;
+			j--;
+			if ((std::isdigit(*j) || *j == ')') && (std::isdigit(*k) || *k == '(' || *k == '-'))
 				continue;
 			else
 				return false;
@@ -444,7 +455,7 @@ int main()
 	// " 3+5 / 2 " = 5
 
 	// my code evalute this to 2, while it's expected to be 7
-	expression = "-1*2+4*5";
+	expression = "1*2+4*5";
 //	calculate(expression);
 	std::cout << expression << " -> "
 			  << calculate(expression) << std::endl;
