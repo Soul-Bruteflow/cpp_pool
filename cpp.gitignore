@@ -3,4 +3,6 @@
 !*.cpp
 !*.hpp
 !*.pdf
+!*.gz
+!*.log
 !Makefile
