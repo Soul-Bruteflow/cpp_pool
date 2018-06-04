@@ -10,16 +10,16 @@ bool Contact::createContact(const std::string data[MAX_CONTACTS][FILED_STATIC_LE
 {
 	//if (!data)
 	//	return (false);
-	std::cout << "tmp_data1:" << data[0][0] << std::endl;
-	std::cout << "tmp_data2:" << data[1][0] << std::endl;
-	std::cout << "tmp_data3:" << data[2][0] << std::endl;
+	//std::cout << "tmp_data1:" << data[0][0] << std::endl;
+	//std::cout << "tmp_data2:" << data[1][0] << std::endl;
+	//std::cout << "tmp_data3:" << data[2][0] << std::endl;
 	for (unsigned int i = 0; i < MAX_FIELDS; i++)
 	{
 		addFieldData(i, data[i]);
 	}
-	std::cout << "tmp_data4:" << _contactFields[0][0] << std::endl;
-	std::cout << "tmp_data5:" << _contactFields[1][0] << std::endl;
-	std::cout << "tmp_data6:" << _contactFields[2][0] << std::endl;
+	//std::cout << "tmp_data4:" << _contactFields[0][0] << std::endl;
+	//std::cout << "tmp_data5:" << _contactFields[1][0] << std::endl;
+	//std::cout << "tmp_data6:" << _contactFields[2][0] << std::endl;
 	return (true);
 }
 

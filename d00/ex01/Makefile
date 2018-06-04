@@ -4,9 +4,8 @@ OBJ_DIR = ./obj/
 INC_DIR = ./inc/
 
 OBJ	=	main.o \
-		Contact.o \
-		Phonebook.o \
-		support_functions.o
+        Contact.o \
+        PhoneBook.o
 
 HEADERS	= $(INC_DIR)
 

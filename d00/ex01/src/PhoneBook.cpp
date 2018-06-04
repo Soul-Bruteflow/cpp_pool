@@ -3,15 +3,14 @@
 PhoneBook::PhoneBook() : currentContact (0)
 {
 	std::cout << std::endl;
-	std::cout << "Welcome to the Phonebookinator 2000!" << std::endl;
-	std::cout << "Available commands for input are: ADD, SEARCH, EXIT" << std::endl;
+	std::cout << YELLOW << "Welcome to the Phonebookinator 2000!" << RESET_COLOR << std::endl;
 	this->printInput();
 }
 
 PhoneBook::~PhoneBook()
 {
 	std::cout << std::endl;
-	std::cout << "Bye :(" << std::endl;
+	std::cout << BLUE << "Bye :(" << RESET_COLOR << std::endl;
 }
 
 void PhoneBook::recordContact()
@@ -20,12 +19,15 @@ void PhoneBook::recordContact()
 
 	if (this->currentContact > MAX_CONTACTS)
 	{
-		std::cout << "ERROR 42: Max contact number reached! 8/8" << std::endl;
+		std::cout << std::endl;
+		std::cout << RED << "ERROR 42: Max contact number reached! 8/8" << RESET_COLOR << std::endl;
+		std::cout << std::endl;
 	}
 	else
 	{
-		std::cout << "To ADD the contact you must fill out all contact's fields." << std::endl;
-		std::cout << "Current contacts count: "<< this->currentContact << "/8" << std::endl;
+		std::cout << std::endl;
+		std::cout << YELLOW << "To ADD the contact you must fill out all contact's fields." << RESET_COLOR << std::endl;
+		std::cout << YELLOW << "Current contacts count: "<< this->currentContact << "/8" << RESET_COLOR << std::endl;
 
 		if (this->currentContact == 8)
 			std::cout << "This is the last contact slot!" << std::endl;
@@ -33,27 +35,48 @@ void PhoneBook::recordContact()
 		for(i = 0; i < MAX_FIELDS; i++)
 		{
 			std::cout << std::endl;
-			std::cout << "Please enter contact's " << fieldLabels_[i][0] << "." << std::endl;
-			this->printInput();
+			std::cout << YELLOW << "Step: " << i << "/11" << " | Please enter contact's " << fieldLabels_[i][0] << "." << RESET_COLOR << std::endl;
+			this->printInput(true, false);
 			getline(std::cin, tmpContactFieldsData[i][0]);
-			std::cout << tmpContactFieldsData[i][0] << std::endl;
+
+			bool whiteSpacesOnly = std::all_of(tmpContactFieldsData[i][0].begin(),tmpContactFieldsData[i][0].end(),isspace);
+			while (whiteSpacesOnly)
+			{
+				std::cout << std::endl;
+				std::cout << YELLOW << "Step: " << i << "/11" << " | Please enter contact's " << fieldLabels_[i][0] << "." << RESET_COLOR << std::endl;
+				this->printInput(true, false);
+				getline(std::cin, tmpContactFieldsData[i][0]);
+				whiteSpacesOnly = std::all_of(tmpContactFieldsData[i][0].begin(),tmpContactFieldsData[i][0].end(),isspace);
+			}
+
+			//std::cout << tmpContactFieldsData[i][0] << std::endl;
 		}
 		_contactList[currentContact].createContact(tmpContactFieldsData);
 
 
-		std::cout << "data: " << _contactList[0].returnFieldData(0);
+		//std::cout << "data: " << _contactList[0].returnFieldData(0);
 
 		this->currentContact++;
-		std::cout << "A contact was successfully created!" << std::endl;
+		std::cout << std::endl;
+		std::cout << GREEN << "A contact was successfully created!" << RESET_COLOR << std::endl;
+		std::cout << std::endl;
 	}
-	std::cout << "Available commands for input are: ADD, SEARCH, EXIT" << std::endl;
 	this->printInput();
 }
 
-void PhoneBook::printInput()
+void PhoneBook::printInput(bool isAdd, bool isSearch)
 {
-	std::cout << std::endl;
-	std::cout << "Input: ";
+	if (!isAdd)
+	{
+		std::cout << YELLOW << "Available commands for input are: ADD, SEARCH, EXIT" << RESET_COLOR << std::endl;
+	}
+	if (isSearch)
+	{
+		std::cout << std::endl;
+		std::cout << YELLOW <<  "Please input the contact's index number. To see the contact's full information." << RESET_COLOR << std::endl;
+	}
+
+	std::cout << GREEN << "Input: " << RESET_COLOR;
 }
 
 void PhoneBook::printTableHead()
@@ -73,24 +96,51 @@ void PhoneBook::printTableHead()
 	<< std::endl;
 }
 
+std::string PhoneBook::truncate(std::string str, size_t width, bool show_dots) const
+{
+	if (str.length() > width)
+	{
+		if (show_dots)
+			return str.substr(0, width) + ".";
+		else
+			return str.substr(0, width);
+	}
+	return str;
+}
+
 void PhoneBook::printShort()
 {
-	//std::string tmp[FILED_STATIC_LEN];
-	for (unsigned int i = 0; i < currentContact; i++)
+	for (int i = 0; i < currentContact; i++)
 	{
-		for (unsigned int j = 0; j < SHORT_FIELDS; j++)
+		std::cout
+		<< std::setw(10)
+		<< i
+		<< "|";
+		for (int j = 0; j < SHORT_FIELDS; j++)
 		{
+			std::string tmp;
+
+			tmp = truncate(_contactList[i].returnFieldData(j), 9, true);
 			std::cout
 			<< std::setw(10)
-			<< i
-			<< "|"
-	  		<< std::setw(10)
-			<< _contactList[i].returnFieldData(j);
-			if (j < 2)
-				std::cout << "|";
-			}
-			std::cout << std::endl;
+			<< tmp
+			<< "|";
 		}
+		std::cout << std::endl;
+	}
+}
+
+void PhoneBook::printFullContact(int n)
+{
+	if (n)
+	{
+
+	}
+	std::cout << "now print contact" << std::endl;
+//	for (unsigned int i = 0; i < MAX_FIELDS; i++)
+//	{
+//		_contactList[n]
+//	}
 }
 
 const std::string PhoneBook::fieldLabels_[MAX_FIELDS][FILED_STATIC_LEN] =

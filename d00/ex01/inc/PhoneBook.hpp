@@ -17,14 +17,16 @@ class PhoneBook
 		void recordContact(void);
 
 	//Print functions
-		void printInput(void);
+		void printInput(bool isAdd = false, bool isSearch = false);
 		void printTableHead(void);
 		void printShort(void);
+		void printFullContact(int n);
 
 	//Fields
 		static const std::string fieldLabels_[MAX_FIELDS][FILED_STATIC_LEN];
-		unsigned int currentContact;
+		int currentContact;
 
+		std::string truncate(std::string str, size_t width, bool show_dots) const;
 	private:
 
 	//Fields
