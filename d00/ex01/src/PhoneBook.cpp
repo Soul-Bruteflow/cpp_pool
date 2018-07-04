@@ -133,7 +133,7 @@ void PhoneBook::printFullContact(int n)
 {
 	if (n <= 0 || n > currentContact || n > MAX_CONTACTS)
 	{
-		//такого индекса нет
+		//такого индекса нет 
 	}
 	std::cout << std::endl << GREEN
 	<< "Success contact #" << n << " selected!" << RESET_COLOR
