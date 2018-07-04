@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/Contact.cpp
+string
+-
+Contact.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/Contact.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/main.cpp
+iostream
+-
+string
+-
+

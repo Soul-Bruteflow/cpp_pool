@@ -15,6 +15,8 @@ class PhoneBook
 
 	//Mutators
 		void recordContact(void);
+		void setContactFields(int i);
+		void addContact(void);
 
 	//Print functions
 		void printInput(bool isAdd = false, bool isSearch = false);
@@ -25,13 +27,14 @@ class PhoneBook
 	//Fields
 		static const std::string fieldLabels_[MAX_FIELDS][FILED_STATIC_LEN];
 		int currentContact;
+		std::string tmpFieldData[FILED_STATIC_LEN];
 
 		std::string truncate(std::string str, size_t width, bool show_dots) const;
 	private:
 
 	//Fields
 		std::string tmpContactFieldsData[MAX_FIELDS][FILED_STATIC_LEN];
-		Contact _contactList[8];
+		Contact _contactList[MAX_CONTACTS + 1];
 
 };
 
