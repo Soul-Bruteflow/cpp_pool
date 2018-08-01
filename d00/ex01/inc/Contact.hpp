@@ -15,7 +15,7 @@ class Contact
 		~Contact();
 
 		// Mutator functions
-		bool addFieldData(int field_index, const std::string data);
+		bool addFieldData(int field_index, std::string data);
 		bool createContact(std::string data[MAX_CONTACTS][FILED_STATIC_LEN]);
 		
 		// Accessor functions

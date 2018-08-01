@@ -13,7 +13,7 @@ bool Contact::createContact(std::string data[MAX_FIELDS][FILED_STATIC_LEN])
 	return (true);
 }
 
-bool Contact::addFieldData(int field_index, std::string data)
+bool Contact::addFieldData(int field_index, const std::string data)
 {
 	if (field_index < 0 || field_index > MAX_FIELDS)
 		return (false);

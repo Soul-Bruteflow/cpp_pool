@@ -44,7 +44,18 @@ int main()
 						book.printInput(true, true);
 						continue;
 					}
-					n = std::stoi((std::string)index, nullptr,10);
+					try
+					{
+						n = std::stoi((std::string)index, nullptr,10);
+					}
+					catch (const std::out_of_range& oor)
+					{
+						std::cerr << "Out of Range error: " << oor.what() << '\n';
+						input.clear();
+						book.printInput();
+						break;
+					}
+
 					if(n >= 0 && n <= book.currentContact - 1)
 					{
 						book.printFullContact(n);

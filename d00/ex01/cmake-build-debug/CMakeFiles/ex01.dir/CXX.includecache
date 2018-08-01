@@ -26,18 +26,6 @@ Contact.hpp
 
 ../inc/defines.hpp
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/Contact.cpp
-string
--
-iostream
--
-Contact.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/Contact.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/PhoneBook.cpp
-PhoneBook.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/PhoneBook.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d00/ex01/src/main.cpp
 iostream
 -

@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : currentContact (1)
+PhoneBook::PhoneBook() : currentContact (0)
 {
 	std::cout << std::endl << YELLOW
 	<< "Welcome to the Phonebookinator 2000!" << RESET_COLOR << std::endl;
@@ -17,7 +17,7 @@ void PhoneBook::recordContact()
 {
 	unsigned int i;
 
-	if (currentContact > MAX_CONTACTS)
+	if (currentContact > MAX_CONTACTS - 1)
 	{
 		std::cout << std::endl << RED
 		<< "ERROR 42: Max contact number reached! 8/8"
@@ -28,10 +28,10 @@ void PhoneBook::recordContact()
 		std::cout << std::endl << YELLOW
 		<< "To ADD the contact you must fill out all contact's fields."
 	 	<< RESET_COLOR << std::endl
-		<< YELLOW << "Current contacts count: " << currentContact << "/8"
+		<< YELLOW << "New contact is created. Current contacts count: " << (currentContact + 1) << "/8"
 		<< RESET_COLOR << std::endl;
 
-		if (currentContact == 8)
+		if (currentContact == 7)
 			std::cout << "This is the last contact slot!" << std::endl;
 
 		for(i = 0; i < MAX_FIELDS; i++)
@@ -54,7 +54,7 @@ void PhoneBook::recordContact()
 		_contactList[currentContact].createContact(tmpContactFieldsData);
 		currentContact++;
 		std::cout << std::endl << GREEN
-		<< "A contact was successfully created!"
+		<< "A contact was successfully filled out!"
 	 	<< RESET_COLOR << std::endl << std::endl;
 	}
 	printInput();
@@ -109,7 +109,7 @@ std::string PhoneBook::truncate(std::string str, size_t width, bool show_dots) c
 
 void PhoneBook::printShort()
 {
-	for (int i = 1; i < currentContact; i++)
+	for (int i = 0; i < currentContact; i++)
 	{
 		std::cout
 		<< std::setw(10)
@@ -131,10 +131,6 @@ void PhoneBook::printShort()
 
 void PhoneBook::printFullContact(int n)
 {
-	if (n <= 0 || n > currentContact || n > MAX_CONTACTS)
-	{
-		//такого индекса нет 
-	}
 	std::cout << std::endl << GREEN
 	<< "Success contact #" << n << " selected!" << RESET_COLOR
 	<< std::endl << std::endl;
@@ -146,30 +142,6 @@ void PhoneBook::printFullContact(int n)
 		std::cout << i << ". " << fieldLabels_[i][0] << ": " << tmp2 << std::endl;
 	}
 }
-
-//void PhoneBook::setContactFields(int i)
-//{
-//	std::cout << "Enter " << fieldLabels_[i][0] << ": ";
-//	getline(std::cin, tmpFieldData[0]);
-//	_contactList[currentContact].addFieldData(i, tmpFieldData[0]);
-//}
-//
-//void PhoneBook::addContact(void)
-//{
-//	if (currentContact >= MAX_CONTACTS)
-//	{
-//		std::cout << "Sorry max contact count reached."
-//				  << std::endl;
-//		return;
-//	}
-//	else
-//	{
-//		std::cin.ignore(INT_MAX, '\n');
-//		for (int i = 0; i < MAX_FIELDS; i++)
-//			setContactFields(i);
-//		currentContact++;
-//	}
-//}
 
 const std::string PhoneBook::fieldLabels_[MAX_FIELDS][FILED_STATIC_LEN] =
 	{
