@@ -24,6 +24,7 @@
     <session id="2080752414">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -76,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="324">
               <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -100,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PhoneBook.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="-915">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -232,24 +233,23 @@
       <workItem from="1530679431170" duration="5295000" />
       <workItem from="1533130651105" duration="82000" />
       <workItem from="1533130787967" duration="41000" />
-      <workItem from="1533136697289" duration="3426000" />
+      <workItem from="1533136697289" duration="4029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54281000" />
+    <option name="totallyTimeSpent" value="54884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1916" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4840871" visible="true" weight="0.18991417" />
-      <window_info id="Structure" order="1" sideWeight="0.5159129" side_tool="true" visible="true" weight="0.18991417" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4848144" visible="true" weight="0.18991417" />
+      <window_info id="Structure" order="1" sideWeight="0.5151856" side_tool="true" visible="true" weight="0.18991417" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32845894" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32845894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2820248" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,7 +332,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="324">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -352,8 +352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PhoneBook.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="-915">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
