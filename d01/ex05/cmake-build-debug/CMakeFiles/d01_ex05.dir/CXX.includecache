@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d01/ex05/Brain.cpp
+sstream
+-
+Brain.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d01/ex05/Brain.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d01/ex05/Brain.hpp
+string
+/Users/bruteflow/_projects/_unit/cpp_pool/d01/ex05/string
+
