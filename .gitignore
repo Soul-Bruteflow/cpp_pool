@@ -1,0 +1,9 @@
+#Custom
+*
+!*.cpp
+!*.hpp
+!*.pdf
+!*.gz
+!*.log
+!Makefile
+!.gitignore
