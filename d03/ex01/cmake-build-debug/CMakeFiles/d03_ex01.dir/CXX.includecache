@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/FragTrap.hpp
+string
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/ScavTrap.hpp
+string
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/main.cpp
+FragTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/FragTrap.hpp
+ScavTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/ScavTrap.hpp
+iostream
+-
+string
+-
+
