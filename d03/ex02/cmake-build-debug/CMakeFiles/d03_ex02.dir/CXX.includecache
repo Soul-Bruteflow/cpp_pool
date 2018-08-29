@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.cpp
+ClapTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
+iostream
+-
+
