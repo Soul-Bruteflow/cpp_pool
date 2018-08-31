@@ -6,8 +6,9 @@
 #define D03_EX00_FRAGTRAP_HPP
 
 #include <string>
+#include "ClapTrap.hpp"
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
 public:
 	/* Canonical / Coplien form */
@@ -17,30 +18,13 @@ public:
 	FragTrap &operator=(FragTrap const &rhs);
 	/* End */
 
-	//Constructor
+	/* Custom */
 	FragTrap(std::string name);
+	/* End */
 
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
 	void vaulthunter_dot_exe(std::string const & target);
-
-	//Helper functions
-	void setName(std::string newName);
-	void restoreEnergy(unsigned int amount);
-	void logStats();
-
-private:
-	std::string  _name;
-	int			 _level;
-	int			 _hitPoints;
-	int			 _maxHitPoints;
-	int			 _energyPoints;
-	int			 _maxEnergyPoints;
-	int 		 _meleeAttackDamage;
-	int 		 _rangedAttackDamage;
-	unsigned int _armorDamageReduction;
 };
 
 
