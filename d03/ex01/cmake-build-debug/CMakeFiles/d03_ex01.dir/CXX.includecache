@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/FragTrap.cpp
+iostream
+-
+FragTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/FragTrap.hpp
+
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex01/FragTrap.hpp
 string
 -

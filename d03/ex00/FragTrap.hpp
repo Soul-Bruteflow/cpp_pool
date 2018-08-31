@@ -17,7 +17,7 @@ public:
 	FragTrap &operator=(FragTrap const &rhs);
 	/* End */
 
-	//Constructor
+	//Additional Constructors
 	FragTrap(std::string name);
 
 	void rangedAttack(std::string const & target);

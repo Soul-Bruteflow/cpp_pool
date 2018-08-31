@@ -12,20 +12,21 @@ class FragTrap
 public:
 	/* Canonical / Coplien form */
 	FragTrap();
-	FragTrap(std::string name);
-
 	FragTrap(FragTrap const &src);
-
 	~FragTrap();
-
 	FragTrap &operator=(FragTrap const &rhs);
 	/* End */
+
+	//Additional Constructors
+	FragTrap(std::string name);
 
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 	void vaulthunter_dot_exe(std::string const & target);
+
+	//Helper functions
 	void setName(std::string newName);
 	void restoreEnergy(unsigned int amount);
 	void logStats();

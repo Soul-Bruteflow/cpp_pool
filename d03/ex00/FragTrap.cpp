@@ -7,8 +7,8 @@
 
 /* Default constructor */
 FragTrap::FragTrap()
-: 	_name("FR4G-TP"),
-  	_level(1),
+:	_name("FR4G-TP"),
+	_level(1),
 	_hitPoints(100),
 	_maxHitPoints(100),
 	_energyPoints(100),
@@ -25,7 +25,7 @@ FragTrap::FragTrap()
 }
 
 FragTrap::FragTrap(std::string name)
-: 	_name(name),
+:	_name(name),
 	_level(1),
 	_hitPoints(100),
 	_maxHitPoints(100),
