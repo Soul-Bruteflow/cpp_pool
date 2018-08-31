@@ -23,33 +23,27 @@ int main()
 	std::cout << "-------->Attacks:" << std::endl;
 	robot_1.meleeAttack("TARGETRAP");
 	robot_1.rangedAttack("TARGETRAP");
-	robot_1.meleeAttack("TARGETRAP");
-	robot_1.rangedAttack("TARGETRAP");
 
-	std::cout << "-------->Attacks out of energy:" << std::endl;
-	robot_1.meleeAttack("TARGETRAP");
-	robot_1.rangedAttack("TARGETRAP");
-	robot_1.logStats();
 
 	std::cout << "-------->Damage:" << std::endl;
-	robot_1.takeDamage(30);
-	robot_1.takeDamage(30);
-	robot_1.takeDamage(30);
-	robot_1.takeDamage(29);
+	robot_1.takeDamage(104);
 	robot_1.logStats();
+
+	std::cout << "-------->Armor:" << std::endl;
+	robot_1.takeDamage(5);
+	robot_1.logStats();
+
 	std::cout << "-------->Damage 0 HP:" << std::endl;
 	robot_1.takeDamage(7);
 	robot_1.logStats();
 
 	std::cout << "-------->Repair:" << std::endl;
 	robot_1.restoreEnergy(100);
-	robot_1.beRepaired(25);
-	robot_1.beRepaired(25);
-	robot_1.beRepaired(25);
-	robot_1.beRepaired(25);
+	robot_1.beRepaired(75);
+	robot_1.logStats();
+
 	std::cout << "-------->Over Repair:" << std::endl;
-	robot_1.beRepaired(25);
-	robot_1.beRepaired(25);
+	robot_1.beRepaired(50);
 	robot_1.logStats();
 
 	std::cout << "-------->Random Attacks:" << std::endl;
@@ -75,33 +69,33 @@ int main()
 //	std::cout << "-------->Attacks:" << std::endl;
 //	robot_4.meleeAttack("TARGETRAP");
 //	robot_4.rangedAttack("TARGETRAP");
-//	robot_4.meleeAttack("TARGETRAP");
-//	robot_4.rangedAttack("TARGETRAP");
 //
-//	std::cout << "-------->Attacks out of energy:" << std::endl;
-//	robot_4.meleeAttack("TARGETRAP");
-//	robot_4.rangedAttack("TARGETRAP");
-//	robot_4.logStats();
 //
 //	std::cout << "-------->Damage:" << std::endl;
-//	robot_4.takeDamage(100);
+//	robot_4.takeDamage(102);
 //	robot_4.logStats();
+//
+//	std::cout << "-------->Armor:" << std::endl;
+//	robot_4.takeDamage(3);
+//	robot_4.logStats();
+//
 //	std::cout << "-------->Damage 0 HP:" << std::endl;
 //	robot_4.takeDamage(7);
 //	robot_4.logStats();
 //
 //	std::cout << "-------->Repair:" << std::endl;
 //	robot_4.restoreEnergy(100);
-//	robot_4.beRepaired(100);
-//	std::cout << "-------->Over Repair:" << std::endl;
-//	robot_4.beRepaired(25);
+//	robot_4.beRepaired(75);
 //	robot_4.logStats();
 //
-//	std::cout << "-------->Random Chalanges:" << std::endl;
-//	robot_4.restoreEnergy(50);
+//	std::cout << "-------->Over Repair:" << std::endl;
+//	robot_4.beRepaired(50);
+//	robot_4.logStats();
+//
+//	std::cout << "-------->Random Attacks:" << std::endl;
+//	robot_4.restoreEnergy(100);
 //	robot_4.challengeNewcomer();
 //	robot_4.challengeNewcomer();
-//	robot_4.restoreEnergy(50);
 //	robot_4.challengeNewcomer();
 //	robot_4.logStats();
 }

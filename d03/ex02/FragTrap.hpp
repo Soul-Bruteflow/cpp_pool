@@ -18,12 +18,9 @@ public:
 	FragTrap &operator=(FragTrap const &rhs);
 	/* End */
 
-	/* Custom */
+	//Additional Constructors
 	FragTrap(std::string name);
-	/* End */
 
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
 	void vaulthunter_dot_exe(std::string const & target);
 };
 

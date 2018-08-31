@@ -90,7 +90,6 @@ void FragTrap::rangedAttack(std::string const &target)
 
 void FragTrap::meleeAttack(std::string const &target)
 {
-	_energyPoints -= 25;
 	std::cout << "<" << _name << ">: attacks <"
 			  << target << "> at melee range, causing <" << _meleeAttackDamage
 			  << "> points of damage!" << std::endl;
