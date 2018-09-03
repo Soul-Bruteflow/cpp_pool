@@ -92,6 +92,12 @@
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.hpp">
 			<Option target="d03_ex03"/>
 		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.cpp">
+			<Option target="d03_ex03"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.hpp">
+			<Option target="d03_ex03"/>
+		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.cpp">
 			<Option target="d03_ex03"/>
 		</Unit>

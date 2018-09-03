@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ClapTrap.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles/d03_ex03.dir/ClapTrap.cpp.o"
   "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles/d03_ex03.dir/FragTrap.cpp.o"
+  "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o"
   "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o"
   "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/main.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles/d03_ex03.dir/main.cpp.o"
   )

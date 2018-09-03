@@ -6,6 +6,8 @@
 #define D03_EX03_NINJATRAP_HPP
 
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 class NinjaTrap : public ClapTrap
 {
@@ -16,6 +18,13 @@ public:
 	~NinjaTrap();
 	NinjaTrap &operator=(NinjaTrap const &rhs);
 	/* End */
+
+	NinjaTrap(std::string name);
+
+	void ninjaShoebox(ClapTrap const & target);
+	void ninjaShoebox(FragTrap const & target);
+	void ninjaShoebox(ScavTrap const & target);
+	void ninjaShoebox(NinjaTrap const & target);
 
 
 private:

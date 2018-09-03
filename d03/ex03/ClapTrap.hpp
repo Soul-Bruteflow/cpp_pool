@@ -17,15 +17,19 @@ public:
 	ClapTrap &operator=(ClapTrap const &rhs);
 	/* End */
 
-	/* Custom */
+	//Additional Constructors
 	ClapTrap(std::string name);
 	ClapTrap(std::string name, int level, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints,
-			int meleeAttackDamage, int rangedAttackDamage, unsigned int armorDamageReduction);
-	/* End */
+			int meleeAttackDamage, int rangedAttackDamage, unsigned int armorDamageReduction, std::string type);
 
+	void rangedAttack(std::string const & target);
+	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	//Helper functions
 	void setName(std::string newName);
+	std::string getName() const;
 	void restoreEnergy(unsigned int amount);
 	void logStats();
 
@@ -39,6 +43,7 @@ protected:
 	int 		 _meleeAttackDamage;
 	int 		 _rangedAttackDamage;
 	unsigned int _armorDamageReduction;
+	std::string  _type;
 
 private:
 

@@ -18,12 +18,9 @@ public:
 	ScavTrap &operator=(ScavTrap const &rhs);
 	/* End */
 
-	/* Custom */
+	//Additional Constructors
 	ScavTrap(std::string name);
-	/* End */
 
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
 	void challengeNewcomer();
 
 private:

@@ -177,6 +177,33 @@ FragTrap.cpp.s:
 	$(MAKE) -f CMakeFiles/d03_ex03.dir/build.make CMakeFiles/d03_ex03.dir/FragTrap.cpp.s
 .PHONY : FragTrap.cpp.s
 
+NinjaTrap.o: NinjaTrap.cpp.o
+
+.PHONY : NinjaTrap.o
+
+# target to build an object file
+NinjaTrap.cpp.o:
+	$(MAKE) -f CMakeFiles/d03_ex03.dir/build.make CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o
+.PHONY : NinjaTrap.cpp.o
+
+NinjaTrap.i: NinjaTrap.cpp.i
+
+.PHONY : NinjaTrap.i
+
+# target to preprocess a source file
+NinjaTrap.cpp.i:
+	$(MAKE) -f CMakeFiles/d03_ex03.dir/build.make CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.i
+.PHONY : NinjaTrap.cpp.i
+
+NinjaTrap.s: NinjaTrap.cpp.s
+
+.PHONY : NinjaTrap.s
+
+# target to generate assembly for a file
+NinjaTrap.cpp.s:
+	$(MAKE) -f CMakeFiles/d03_ex03.dir/build.make CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.s
+.PHONY : NinjaTrap.cpp.s
+
 ScavTrap.o: ScavTrap.cpp.o
 
 .PHONY : ScavTrap.o
@@ -246,6 +273,9 @@ help:
 	@echo "... FragTrap.o"
 	@echo "... FragTrap.i"
 	@echo "... FragTrap.s"
+	@echo "... NinjaTrap.o"
+	@echo "... NinjaTrap.i"
+	@echo "... NinjaTrap.s"
 	@echo "... ScavTrap.o"
 	@echo "... ScavTrap.i"
 	@echo "... ScavTrap.s"

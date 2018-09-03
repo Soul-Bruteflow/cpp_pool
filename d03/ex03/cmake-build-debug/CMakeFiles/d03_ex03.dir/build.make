@@ -83,9 +83,22 @@ CMakeFiles/d03_ex03.dir/FragTrap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/d03_ex03.dir/FragTrap.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.cpp -o CMakeFiles/d03_ex03.dir/FragTrap.cpp.s
 
+CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o: CMakeFiles/d03_ex03.dir/flags.make
+CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o: ../NinjaTrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.cpp
+
+CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.cpp > CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.i
+
+CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.cpp -o CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.s
+
 CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o: CMakeFiles/d03_ex03.dir/flags.make
 CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o: ../ScavTrap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.cpp
 
 CMakeFiles/d03_ex03.dir/ScavTrap.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/d03_ex03.dir/ScavTrap.cpp.s: cmake_force
 
 CMakeFiles/d03_ex03.dir/main.cpp.o: CMakeFiles/d03_ex03.dir/flags.make
 CMakeFiles/d03_ex03.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/d03_ex03.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/d03_ex03.dir/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d03_ex03.dir/main.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/main.cpp
 
 CMakeFiles/d03_ex03.dir/main.cpp.i: cmake_force
@@ -113,6 +126,7 @@ CMakeFiles/d03_ex03.dir/main.cpp.s: cmake_force
 d03_ex03_OBJECTS = \
 "CMakeFiles/d03_ex03.dir/ClapTrap.cpp.o" \
 "CMakeFiles/d03_ex03.dir/FragTrap.cpp.o" \
+"CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o" \
 "CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o" \
 "CMakeFiles/d03_ex03.dir/main.cpp.o"
 
@@ -121,11 +135,12 @@ d03_ex03_EXTERNAL_OBJECTS =
 
 d03_ex03: CMakeFiles/d03_ex03.dir/ClapTrap.cpp.o
 d03_ex03: CMakeFiles/d03_ex03.dir/FragTrap.cpp.o
+d03_ex03: CMakeFiles/d03_ex03.dir/NinjaTrap.cpp.o
 d03_ex03: CMakeFiles/d03_ex03.dir/ScavTrap.cpp.o
 d03_ex03: CMakeFiles/d03_ex03.dir/main.cpp.o
 d03_ex03: CMakeFiles/d03_ex03.dir/build.make
 d03_ex03: CMakeFiles/d03_ex03.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable d03_ex03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable d03_ex03"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/d03_ex03.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
