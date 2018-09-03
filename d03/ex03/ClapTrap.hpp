@@ -20,10 +20,8 @@ public:
 	//Additional Constructors
 	ClapTrap(std::string name);
 	ClapTrap(std::string name, int level, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints,
-			int meleeAttackDamage, int rangedAttackDamage, unsigned int armorDamageReduction, std::string type);
+			int meleeAttackDamage, int rangedAttackDamage, unsigned int armorDamageReduction);
 
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
@@ -43,7 +41,6 @@ protected:
 	int 		 _meleeAttackDamage;
 	int 		 _rangedAttackDamage;
 	unsigned int _armorDamageReduction;
-	std::string  _type;
 
 private:
 

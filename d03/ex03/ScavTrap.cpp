@@ -7,14 +7,14 @@
 
 /* Default constructor */
 ScavTrap::ScavTrap()
-:ClapTrap::ClapTrap("SC4V-TP", 1, 100, 100, 50, 50, 20, 15, 3, "SC4V-TP")
+:ClapTrap::ClapTrap("SC4V-TP", 1, 100, 100, 50, 50, 20, 15, 3)
 {
 	std::cout << "<" << _name << ">: Starting!" << std::endl;
 	std::cout << "<" << _name << ">: Directive one: Challenge humanity! Directive two: Dance!" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
-:ClapTrap::ClapTrap(name, 1, 100, 100, 50, 50, 20, 15, 3, "SC4V-TP")
+:ClapTrap::ClapTrap(name, 1, 100, 100, 50, 50, 20, 15, 3)
 {
 	std::cout << "<" << _name << ">: Starting!" << std::endl;
 	std::cout << "<" << _name << ">: Directive one: Challenge humanity! Directive two: Dance!" << std::endl;
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(std::string name)
 /* Copy constructor */
 ScavTrap::ScavTrap(ScavTrap const &src)
 :ClapTrap::ClapTrap(src._name, src._level, src._hitPoints, src._maxHitPoints, src._energyPoints,
-src._maxEnergyPoints, src._meleeAttackDamage, src._rangedAttackDamage, src._armorDamageReduction, src._type)
+src._maxEnergyPoints, src._meleeAttackDamage, src._rangedAttackDamage, src._armorDamageReduction)
 {
 	std::cout << "<" << _name << ">: Hm.. maybe it's not me who is copy, but you!" << std::endl;
 }
@@ -47,8 +47,21 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs)
 	this->_meleeAttackDamage = rhs._meleeAttackDamage;
 	this->_rangedAttackDamage = rhs._rangedAttackDamage;
 	this->_armorDamageReduction = rhs._armorDamageReduction;
-	this->_type = rhs._type;
 	return *this;
+}
+
+void ScavTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "<" << _name << ">: attacks <"
+			  << target << "> at range with electricity, causing massive <" << _rangedAttackDamage
+			  << "> points of damage!" << std::endl;
+}
+
+void ScavTrap::meleeAttack(std::string const &target)
+{
+	std::cout << "<" << _name << ">: bites <"
+			  << target << "> at close range, causing massive <" << _meleeAttackDamage
+			  << "> points of damage!" << std::endl;
 }
 
 void ScavTrap::challengeNewcomer()

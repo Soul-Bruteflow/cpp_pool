@@ -21,6 +21,8 @@ public:
 	//Additional Constructors
 	FragTrap(std::string name);
 
+	void rangedAttack(std::string const & target);
+	void meleeAttack(std::string const & target);
 	void vaulthunter_dot_exe(std::string const & target);
 };
 

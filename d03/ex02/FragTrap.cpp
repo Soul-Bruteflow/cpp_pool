@@ -7,14 +7,14 @@
 
 /* Default constructor */
 FragTrap::FragTrap()
-:ClapTrap::ClapTrap("FR4G-TP", 1, 100, 100, 100, 100, 30, 20, 5, "FR4G-TP")
+:ClapTrap::ClapTrap("FR4G-TP", 1, 100, 100, 100, 100, 30, 20, 5)
 {
 	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
 	std::cout << "<" << _name << ">: Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
-:ClapTrap::ClapTrap(name, 1, 100, 100, 100, 100, 30, 20, 5, "FR4G-TP")
+:ClapTrap::ClapTrap(name, 1, 100, 100, 100, 100, 30, 20, 5)
 {
 	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
 	std::cout << "<" << _name << ">: Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string name)
 /* Copy constructor */
 FragTrap::FragTrap(FragTrap const &src)
 :ClapTrap::ClapTrap(src._name, src._level, src._hitPoints, src._maxHitPoints, src._energyPoints,
-src._maxEnergyPoints, src._meleeAttackDamage, src._rangedAttackDamage, src._armorDamageReduction, src._type)
+src._maxEnergyPoints, src._meleeAttackDamage, src._rangedAttackDamage, src._armorDamageReduction)
 {
 	std::cout << "<" << _name << ">: I AM NOT A COPY. IT'S A LIE!" << std::endl;
 }
@@ -47,8 +47,21 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs)
 	this->_meleeAttackDamage = rhs._meleeAttackDamage;
 	this->_rangedAttackDamage = rhs._rangedAttackDamage;
 	this->_armorDamageReduction = rhs._armorDamageReduction;
-	this->_type = rhs._type;
 	return *this;
+}
+
+void FragTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "<" << _name << ">: fiercely attacks <"
+			  << target << "> at range, causing <" << _rangedAttackDamage
+			  << "> points of damage!" << std::endl;
+}
+
+void FragTrap::meleeAttack(std::string const &target)
+{
+	std::cout << "<" << _name << ">: fiercely attacks <"
+			  << target << "> at melee range, causing <" << _meleeAttackDamage
+			  << "> points of damage!" << std::endl;
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)

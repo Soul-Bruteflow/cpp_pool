@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.cpp
+ClapTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
+
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
 iostream
 -
@@ -21,4 +25,26 @@ string
 -
 ClapTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ScavTrap.cpp
+iostream
+-
+ScavTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ScavTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ScavTrap.hpp
+string
+-
+ClapTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ClapTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/main.cpp
+FragTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/FragTrap.hpp
+ScavTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex02/ScavTrap.hpp
+iostream
+-
+string
+-
 

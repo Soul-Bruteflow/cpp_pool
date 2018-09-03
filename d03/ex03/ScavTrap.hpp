@@ -21,6 +21,8 @@ public:
 	//Additional Constructors
 	ScavTrap(std::string name);
 
+	void rangedAttack(std::string const & target);
+	void meleeAttack(std::string const & target);
 	void challengeNewcomer();
 
 private:

@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ClapTrap.cpp
-ClapTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ClapTrap.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ClapTrap.hpp
 iostream
 -
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.cpp
-iostream
--
-FragTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.hpp
 string
@@ -40,27 +30,9 @@ FragTrap.hpp
 ScavTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.hpp
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.cpp
-iostream
--
-ScavTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.hpp
 string
 -
 ClapTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ClapTrap.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/main.cpp
-FragTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/FragTrap.hpp
-ScavTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/ScavTrap.hpp
-NinjaTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex03/NinjaTrap.hpp
-iostream
--
-string
--
 
