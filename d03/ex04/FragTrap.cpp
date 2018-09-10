@@ -9,8 +9,7 @@
 FragTrap::FragTrap()
 :ClapTrap::ClapTrap("FR4G-TP", 1, 100, 100, 100, 100, 30, 20, 5)
 {
-	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
-	std::cout << "<" << _name << ">: Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
+	std::cout << "<" << _name << ">: FragTrap constructor called!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)

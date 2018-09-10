@@ -9,7 +9,7 @@
 NinjaTrap::NinjaTrap()
 :ClapTrap::ClapTrap("NINJ4-TP", 1, 60, 60, 120, 120, 60, 5, 0)
 {
-	std::cout << "<" << _name << ">: Silence!" << std::endl;
+	std::cout << "<" << _name << ">: NinjaTrap Constructor called!" << std::endl;
 }
 
 NinjaTrap::NinjaTrap(std::string name)

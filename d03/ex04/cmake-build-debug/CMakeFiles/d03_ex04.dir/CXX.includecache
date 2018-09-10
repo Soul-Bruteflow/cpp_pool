@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.cpp
-ClapTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
 iostream
 -
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.cpp
-iostream
--
-FragTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
 string
@@ -26,31 +16,25 @@ string
 ClapTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.cpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
+ClapTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
+FragTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
+ScavTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
+string
+-
+ClapTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/SuperTrap.hpp
+FragTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
 NinjaTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
-ClapTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
-ClapTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
-FragTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
-ScavTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.cpp
-iostream
--
-ScavTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
-string
--
-ClapTrap.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/main.cpp
 FragTrap.hpp
@@ -59,6 +43,8 @@ ScavTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
 NinjaTrap.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
+SuperTrap.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/SuperTrap.hpp
 iostream
 -
 string

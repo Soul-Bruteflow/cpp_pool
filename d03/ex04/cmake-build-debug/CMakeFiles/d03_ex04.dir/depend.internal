@@ -18,9 +18,17 @@ CMakeFiles/d03_ex04.dir/ScavTrap.cpp.o
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.cpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
+CMakeFiles/d03_ex04.dir/SuperTrap.cpp.o
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/SuperTrap.cpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/SuperTrap.hpp
 CMakeFiles/d03_ex04.dir/main.cpp.o
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ClapTrap.hpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/FragTrap.hpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/NinjaTrap.hpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/ScavTrap.hpp
+ /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/SuperTrap.hpp
  /Users/bruteflow/_projects/_unit/cpp_pool/d03/ex04/main.cpp

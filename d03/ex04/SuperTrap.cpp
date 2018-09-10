@@ -8,13 +8,13 @@
 SuperTrap::SuperTrap()
 :ClapTrap::ClapTrap("SUP4R-TP", 1, 100, 100, 120, 120, 60, 20, 5)
 {
-	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
+	std::cout << "<" << _name << ">: SuperTrap constructor called!" << std::endl;
 }
 
 SuperTrap::SuperTrap(std::string name)
 :ClapTrap::ClapTrap(name, 1, 100, 100, 120, 120, 60, 20, 5)
 {
-	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
+	std::cout << "<" << _name << ">: SuperTrap parameter constructor called!" << std::endl;
 }
 
 /* Copy constructor */
@@ -22,13 +22,13 @@ SuperTrap::SuperTrap(SuperTrap const &src)
 :ClapTrap::ClapTrap(src._name, src._level, src._hitPoints, src._maxHitPoints, src._energyPoints,
 src._maxEnergyPoints, src._meleeAttackDamage, src._rangedAttackDamage, src._armorDamageReduction)
 {
-	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
+	std::cout << "<" << _name << ">: SuperTrap copy constructor called!" << std::endl;
 }
 
 /* Default destructor */
 SuperTrap::~SuperTrap()
 {
-	std::cout << "<" << _name << ">: Starting an bootup sequence!" << std::endl;
+	std::cout << "<" << _name << ">: SuperTrap destructor called!" << std::endl;
 }
 
 /* Assignment operator overload (Update) */
@@ -44,6 +44,7 @@ SuperTrap &SuperTrap::operator=(SuperTrap const &rhs)
 	this->_meleeAttackDamage = rhs._meleeAttackDamage;
 	this->_rangedAttackDamage = rhs._rangedAttackDamage;
 	this->_armorDamageReduction = rhs._armorDamageReduction;
+	std::cout << "<" << _name << ">: SuperTrap assignment operator called!" << std::endl;
 	return *this;
 }
 
