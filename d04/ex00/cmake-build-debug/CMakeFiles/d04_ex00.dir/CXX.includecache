@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Peon.cpp
+Peon.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Peon.hpp
+iostream
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Peon.hpp
+Victim.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Victim.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Sorcerer.hpp
+string
+-
+Victim.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Victim.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Victim.hpp
+string
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/main.cpp
+Sorcerer.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Sorcerer.hpp
+Victim.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Victim.hpp
+Peon.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex00/Peon.hpp
+iostream
+-
+
