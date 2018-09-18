@@ -47,7 +47,7 @@ void Character::equip(AWeapon *weapon)
 
 void Character::attack(Enemy *target)
 {
-	if (target->getHP() < 0)
+	if (target->getHP() <= 0)
 		return;
 	if (_weapon)
 	{

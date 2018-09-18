@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/AWeapon.cpp
-AWeapon.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/AWeapon.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/AWeapon.hpp
 string
 -
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Character.cpp
-iostream
--
-Character.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Character.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Character.hpp
 string
@@ -28,49 +18,21 @@ AWeapon.hpp
 Enemy.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Enemy.hpp
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Enemy.cpp
-Enemy.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Enemy.hpp
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Enemy.hpp
 string
 -
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PlasmaRifle.cpp
-PlasmaRifle.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PlasmaRifle.hpp
-iostream
--
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PlasmaRifle.hpp
 AWeapon.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/AWeapon.hpp
 
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PowerFist.cpp
-PowerFist.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PowerFist.hpp
-iostream
--
-
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/PowerFist.hpp
 AWeapon.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/AWeapon.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/RadScorpion.cpp
-iostream
--
-RadScorpion.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/RadScorpion.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/RadScorpion.hpp
 Enemy.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Enemy.hpp
-
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/SuperMutant.cpp
-iostream
--
-SuperMutant.hpp
-/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/SuperMutant.hpp
 
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/SuperMutant.hpp
 Enemy.hpp
@@ -87,4 +49,6 @@ Character.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/Character.hpp
 RadScorpion.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/RadScorpion.hpp
+SuperMutant.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex01/SuperMutant.hpp
 
