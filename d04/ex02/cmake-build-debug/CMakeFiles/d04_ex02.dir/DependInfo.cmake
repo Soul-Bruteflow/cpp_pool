@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o"
   "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles/d04_ex02.dir/Squad.cpp.o"
+  "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o"
   "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/main.cpp" "/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles/d04_ex02.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

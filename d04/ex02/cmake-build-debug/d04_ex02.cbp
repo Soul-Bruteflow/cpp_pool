@@ -80,10 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.cpp">
+			<Option target="d04_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.hpp">
+			<Option target="d04_ex02"/>
+		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.cpp">
 			<Option target="d04_ex02"/>
 		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.hpp">
+			<Option target="d04_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.cpp">
+			<Option target="d04_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.hpp">
 			<Option target="d04_ex02"/>
 		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/main.cpp">

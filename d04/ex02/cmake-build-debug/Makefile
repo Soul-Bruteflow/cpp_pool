@@ -123,6 +123,33 @@ d04_ex02/fast:
 	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/build
 .PHONY : d04_ex02/fast
 
+AssaultTerminator.o: AssaultTerminator.cpp.o
+
+.PHONY : AssaultTerminator.o
+
+# target to build an object file
+AssaultTerminator.cpp.o:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o
+.PHONY : AssaultTerminator.cpp.o
+
+AssaultTerminator.i: AssaultTerminator.cpp.i
+
+.PHONY : AssaultTerminator.i
+
+# target to preprocess a source file
+AssaultTerminator.cpp.i:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.i
+.PHONY : AssaultTerminator.cpp.i
+
+AssaultTerminator.s: AssaultTerminator.cpp.s
+
+.PHONY : AssaultTerminator.s
+
+# target to generate assembly for a file
+AssaultTerminator.cpp.s:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.s
+.PHONY : AssaultTerminator.cpp.s
+
 Squad.o: Squad.cpp.o
 
 .PHONY : Squad.o
@@ -149,6 +176,33 @@ Squad.s: Squad.cpp.s
 Squad.cpp.s:
 	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/Squad.cpp.s
 .PHONY : Squad.cpp.s
+
+TacticalMarine.o: TacticalMarine.cpp.o
+
+.PHONY : TacticalMarine.o
+
+# target to build an object file
+TacticalMarine.cpp.o:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o
+.PHONY : TacticalMarine.cpp.o
+
+TacticalMarine.i: TacticalMarine.cpp.i
+
+.PHONY : TacticalMarine.i
+
+# target to preprocess a source file
+TacticalMarine.cpp.i:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.i
+.PHONY : TacticalMarine.cpp.i
+
+TacticalMarine.s: TacticalMarine.cpp.s
+
+.PHONY : TacticalMarine.s
+
+# target to generate assembly for a file
+TacticalMarine.cpp.s:
+	$(MAKE) -f CMakeFiles/d04_ex02.dir/build.make CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.s
+.PHONY : TacticalMarine.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... d04_ex02"
+	@echo "... AssaultTerminator.o"
+	@echo "... AssaultTerminator.i"
+	@echo "... AssaultTerminator.s"
 	@echo "... Squad.o"
 	@echo "... Squad.i"
 	@echo "... Squad.s"
+	@echo "... TacticalMarine.o"
+	@echo "... TacticalMarine.i"
+	@echo "... TacticalMarine.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

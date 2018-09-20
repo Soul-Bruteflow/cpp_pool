@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.hpp
+ISpaceMarine.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISpaceMarine.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISpaceMarine.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISquad.hpp
+ISpaceMarine.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISpaceMarine.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.hpp
+ISquad.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISquad.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.hpp
+ISpaceMarine.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISpaceMarine.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/main.cpp
+iostream
+-
+ISpaceMarine.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISpaceMarine.hpp
+TacticalMarine.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.hpp
+AssaultTerminator.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.hpp
+ISquad.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/ISquad.hpp
+Squad.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.hpp
+

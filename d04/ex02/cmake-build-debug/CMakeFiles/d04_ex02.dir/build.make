@@ -57,9 +57,22 @@ include CMakeFiles/d04_ex02.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/d04_ex02.dir/flags.make
 
+CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o: CMakeFiles/d04_ex02.dir/flags.make
+CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o: ../AssaultTerminator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.cpp
+
+CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.cpp > CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.i
+
+CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/AssaultTerminator.cpp -o CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.s
+
 CMakeFiles/d04_ex02.dir/Squad.cpp.o: CMakeFiles/d04_ex02.dir/flags.make
 CMakeFiles/d04_ex02.dir/Squad.cpp.o: ../Squad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/d04_ex02.dir/Squad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/d04_ex02.dir/Squad.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d04_ex02.dir/Squad.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.cpp
 
 CMakeFiles/d04_ex02.dir/Squad.cpp.i: cmake_force
@@ -70,9 +83,22 @@ CMakeFiles/d04_ex02.dir/Squad.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/d04_ex02.dir/Squad.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/Squad.cpp -o CMakeFiles/d04_ex02.dir/Squad.cpp.s
 
+CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o: CMakeFiles/d04_ex02.dir/flags.make
+CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o: ../TacticalMarine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.cpp
+
+CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.cpp > CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.i
+
+CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/TacticalMarine.cpp -o CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.s
+
 CMakeFiles/d04_ex02.dir/main.cpp.o: CMakeFiles/d04_ex02.dir/flags.make
 CMakeFiles/d04_ex02.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/d04_ex02.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/d04_ex02.dir/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/d04_ex02.dir/main.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/main.cpp
 
 CMakeFiles/d04_ex02.dir/main.cpp.i: cmake_force
@@ -85,17 +111,21 @@ CMakeFiles/d04_ex02.dir/main.cpp.s: cmake_force
 
 # Object files for target d04_ex02
 d04_ex02_OBJECTS = \
+"CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o" \
 "CMakeFiles/d04_ex02.dir/Squad.cpp.o" \
+"CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o" \
 "CMakeFiles/d04_ex02.dir/main.cpp.o"
 
 # External object files for target d04_ex02
 d04_ex02_EXTERNAL_OBJECTS =
 
+d04_ex02: CMakeFiles/d04_ex02.dir/AssaultTerminator.cpp.o
 d04_ex02: CMakeFiles/d04_ex02.dir/Squad.cpp.o
+d04_ex02: CMakeFiles/d04_ex02.dir/TacticalMarine.cpp.o
 d04_ex02: CMakeFiles/d04_ex02.dir/main.cpp.o
 d04_ex02: CMakeFiles/d04_ex02.dir/build.make
 d04_ex02: CMakeFiles/d04_ex02.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable d04_ex02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/d04/ex02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable d04_ex02"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/d04_ex02.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

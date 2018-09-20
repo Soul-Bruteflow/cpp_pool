@@ -56,11 +56,10 @@ ISpaceMarine *Squad::getUnit(int n) const
 
 int Squad::push(ISpaceMarine *unit)
 {
-	t_list *crawler = _squad;
+	t_list *crawler;
 
-	if (unit != nullptr && !_alreadyInTheSquad(unit, crawler))
+	if (unit != nullptr && !_alreadyInTheSquad(unit, _squad))
 	{
-		crawler = _squad;
 		if (_squad == nullptr)
 		{
 			_squad = new t_list;
@@ -69,20 +68,25 @@ int Squad::push(ISpaceMarine *unit)
 		}
 		else
 		{
-			while (crawler->next)
+			crawler = _squad;
+			while (crawler->next != nullptr)
 				crawler = crawler->next;
 
-			crawler = new t_list;
-			crawler->unit = unit;
-			crawler->next = nullptr;
+			t_list *tmpNode = new t_list;
+			tmpNode->unit = unit;
+			tmpNode->next = nullptr;
+
+			crawler->next = tmpNode;
 		}
 		_unitCount += 1;
 	}
 	return _unitCount;
 }
 
-bool Squad::_alreadyInTheSquad(const ISpaceMarine *unit, const t_list *crawler) const
+bool Squad::_alreadyInTheSquad(const ISpaceMarine *unit, const t_list *squad) const
 {
+	const t_list *crawler = squad;
+
 	if (crawler == nullptr)
 		return false;
 
@@ -98,13 +102,13 @@ bool Squad::_alreadyInTheSquad(const ISpaceMarine *unit, const t_list *crawler) 
 
 void Squad::_cleanSquad()
 {
-	t_list *crawler = _squad->next;
+	t_list *tmp;
 
-	while (crawler != nullptr)
+	while (_squad)
 	{
-		_squad->next = crawler->next;
-		crawler->next = nullptr;
-		delete crawler;
-		crawler = _squad->next;
+		tmp = _squad;
+		delete _squad->unit;
+		_squad = _squad->next;
+		delete tmp;
 	}
 }
