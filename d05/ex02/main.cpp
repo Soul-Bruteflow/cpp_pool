@@ -61,7 +61,7 @@ int main()
 	std::cout << b5;
 
 	//////////////////////////////////
-
+	
 	std::cout << "\n* Form Tests. *\n";
 
 	std::cout << "\n* Illegal Forms. *\n";
