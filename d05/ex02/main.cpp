@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
@@ -61,62 +62,68 @@ int main()
 	std::cout << b5;
 
 	//////////////////////////////////
-	
-	std::cout << "\n* Form Tests. *\n";
+//
+//	std::cout << "\n* Form Tests. *\n";
+//
+//	std::cout << "\n* Illegal Forms. *\n";
+//	try
+//	{
+//		Form f1("form_1", 0, 0);
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
+//
+//	try
+//	{
+//		Form f1("form_1", 151, 151);
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
+//
+//	std::cout << "\n* Form sign test. *\n";
+//	hermes.setGrade(50);
+//	std::cout << hermes;
+//
+//	Form f3("form_3", 50, 50);
+//	std::cout << f3;
+//
+//	try
+//	{
+//		hermes.signForm(f3);
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
+//
+//	std::cout << "\n* Illegal form sign test. *\n";
+//	try
+//	{
+//		hermes.signForm(f3);
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
+//
+//	Form f4("form_4", 10, 10);
+//	std::cout << f4;
+//	try
+//	{
+//		hermes.signForm(f4);
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cout << e.what() << std::endl;
+//	}
 
-	std::cout << "\n* Illegal Forms. *\n";
-	try
-	{
-		Form f1("form_1", 0, 0);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+    Bureaucrat b99("99", 50);
+    ShrubberyCreationForm s99("s99");
 
-	try
-	{
-		Form f1("form_1", 151, 151);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "\n* Form sign test. *\n";
-	hermes.setGrade(50);
-	std::cout << hermes;
-
-	Form f3("form_3", 50, 50);
-	std::cout << f3;
-
-	try
-	{
-		hermes.signForm(f3);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "\n* Illegal form sign test. *\n";
-	try
-	{
-		hermes.signForm(f3);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	Form f4("form_4", 10, 10);
-	std::cout << f4;
-	try
-	{
-		hermes.signForm(f4);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+    s99.beSigned(b99);
+    s99.execute(b99);
 }

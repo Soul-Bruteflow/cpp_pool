@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Bureaucrat.hpp
+string
+-
+Form.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+string
+-
+Bureaucrat.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Bureaucrat.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/ShrubberyCreationForm.hpp
+Form.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+string
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/main.cpp
+iostream
+-
+Bureaucrat.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Bureaucrat.hpp
+Form.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+ShrubberyCreationForm.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/ShrubberyCreationForm.hpp
+

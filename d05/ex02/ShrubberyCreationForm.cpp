@@ -38,18 +38,30 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	std::string		fileName = this->getName() + "_shrubbery";
 	std::ofstream	stream(fileName);
 
-	stream
-	<<
-	"                ,@@@,                  \n"
-	"              ,@@@@@@@,                \n"
-	"     ,,,.    ,@@@@@@/@@,  .o88888o.    \n"
-   	"  ,&%%&%&&%,@@@@@@/@@@@@@,8888*88/8o   \n"
-	" ,%&@%&&%&&%@@@#@@@/@@@@@@8888888876   \n"
-	" %&&%&%&/%&&%@@@@@/ /@@@@8888888888'   \n"
-	" %&&%@ %&%%&&@@@ V /@@' `88*8 `/88'    \n"
-	" `&%@ ` @%&'    |.|        8|'|8'      \n"
-	"     |o|        | |         | |        \n"
-	"     |.|        | |         | |        \n"
-	"  (({   }))_|__{   }_//__(({   }_))__/_\n";
-	stream.close();
+	if (executor.getGrade() <= 137 && this->getSignState())
+	{
+		stream
+		<<
+		"                ,@@@,                  \n"
+		"              ,@@@@@@@,                \n"
+		"     ,,,.    ,@@@@@@/@@,  .o88888o.    \n"
+		"  ,&%%&%&&%,@@@@@@/@@@@@@,8888*88/8o   \n"
+		" ,%&@%&&%&&%@@@#@@@/@@@@@@8888888876   \n"
+		" %&&%&%&/%&&%@@@@@/ /@@@@8888888888'   \n"
+		" %&&%@ %&%%&&@@@ V /@@' `88*8 `/88'    \n"
+		" `&%@ ` @%&'    |.|        8|'|8'      \n"
+		"     |o|        | |         | |        \n"
+		"     |.|        | |         | |        \n"
+		"  (({   }))_|__{   }_//__(({   }_))__/_\n";
+		stream.close();
+		std::cout << "Bureaucrat [" << executor.getName() << "] executed Shrubbery Form [" << this->getName() << "]" << std::endl;
+	}
+	else if (!this->getSignState())
+	{
+		std::cout << "Error43S: Bureaucrat [" << executor.getName()
+				  << "] can't execute the form [" << this->getName() << "]. It is not signed yet." << std::endl;
+		return;
+	}
+	else
+		throw Form::GradeTooLowException();
 }
