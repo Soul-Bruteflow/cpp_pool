@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/d05_ex02.dir/Bureaucrat.cpp.o"
   "CMakeFiles/d05_ex02.dir/Form.cpp.o"
+  "CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o"
+  "CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o"
   "CMakeFiles/d05_ex02.dir/ShrubberyCreationForm.cpp.o"
   "CMakeFiles/d05_ex02.dir/main.cpp.o"
   "d05_ex02.pdb"

@@ -31,6 +31,7 @@ public:
 	void			decrementGrade(unsigned int value);
 
 	void			signForm(Form &form);
+	void			executeForm(Form const & form);
 
 	class GradeTooLowException : public std::exception
 	{

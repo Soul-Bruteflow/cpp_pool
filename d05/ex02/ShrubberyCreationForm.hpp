@@ -19,9 +19,6 @@ public:
 	ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
 
 	void execute(Bureaucrat const &executor) const;
-
-private:
-
 };
 
 

@@ -9,6 +9,16 @@ CMakeFiles/d05_ex02.dir/Form.cpp.o: ../Bureaucrat.hpp
 CMakeFiles/d05_ex02.dir/Form.cpp.o: ../Form.cpp
 CMakeFiles/d05_ex02.dir/Form.cpp.o: ../Form.hpp
 
+CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o: ../Bureaucrat.hpp
+CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o: ../Form.hpp
+CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o: ../PresidentialPardonForm.cpp
+CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o: ../PresidentialPardonForm.hpp
+
+CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o: ../Bureaucrat.hpp
+CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o: ../Form.hpp
+CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o: ../RobotomyRequestForm.cpp
+CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o: ../RobotomyRequestForm.hpp
+
 CMakeFiles/d05_ex02.dir/ShrubberyCreationForm.cpp.o: ../Bureaucrat.hpp
 CMakeFiles/d05_ex02.dir/ShrubberyCreationForm.cpp.o: ../Form.hpp
 CMakeFiles/d05_ex02.dir/ShrubberyCreationForm.cpp.o: ../ShrubberyCreationForm.cpp
@@ -16,6 +26,8 @@ CMakeFiles/d05_ex02.dir/ShrubberyCreationForm.cpp.o: ../ShrubberyCreationForm.hp
 
 CMakeFiles/d05_ex02.dir/main.cpp.o: ../Bureaucrat.hpp
 CMakeFiles/d05_ex02.dir/main.cpp.o: ../Form.hpp
+CMakeFiles/d05_ex02.dir/main.cpp.o: ../PresidentialPardonForm.hpp
+CMakeFiles/d05_ex02.dir/main.cpp.o: ../RobotomyRequestForm.hpp
 CMakeFiles/d05_ex02.dir/main.cpp.o: ../ShrubberyCreationForm.hpp
 CMakeFiles/d05_ex02.dir/main.cpp.o: ../main.cpp
 

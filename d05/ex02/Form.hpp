@@ -16,7 +16,7 @@ class Form
 public:
 	/* Canonical Form */
 	Form();
-	Form(std::string name, unsigned int signGrade, unsigned int executeGrade);
+	Form(std::string name, std::string target, unsigned int signGrade, unsigned int executeGrade);
 	Form(Form const &src);
 	virtual ~Form();
 	Form &operator=(Form const &rhs);
@@ -24,6 +24,7 @@ public:
 	virtual void execute(Bureaucrat const &executor) const = 0;
 
 	std::string getName() const;
+	std::string getTarget() const;
 	bool getSignState() const;
 	int getSignGrade() const;
 	int getExecuteGrade() const;
@@ -53,6 +54,7 @@ public:
 
 private:
 	const std::string		_name;
+	const std::string		_target;
 	bool					_isSigned;
 	const unsigned int		_signGrade;
 	const unsigned int		_executeGrade;

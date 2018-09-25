@@ -92,6 +92,18 @@
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp">
 			<Option target="d05_ex02"/>
 		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/PresidentialPardonForm.cpp">
+			<Option target="d05_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/PresidentialPardonForm.hpp">
+			<Option target="d05_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/RobotomyRequestForm.cpp">
+			<Option target="d05_ex02"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/RobotomyRequestForm.hpp">
+			<Option target="d05_ex02"/>
+		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/ShrubberyCreationForm.cpp">
 			<Option target="d05_ex02"/>
 		</Unit>

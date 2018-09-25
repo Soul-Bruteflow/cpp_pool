@@ -177,6 +177,60 @@ Form.cpp.s:
 	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/Form.cpp.s
 .PHONY : Form.cpp.s
 
+PresidentialPardonForm.o: PresidentialPardonForm.cpp.o
+
+.PHONY : PresidentialPardonForm.o
+
+# target to build an object file
+PresidentialPardonForm.cpp.o:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.o
+.PHONY : PresidentialPardonForm.cpp.o
+
+PresidentialPardonForm.i: PresidentialPardonForm.cpp.i
+
+.PHONY : PresidentialPardonForm.i
+
+# target to preprocess a source file
+PresidentialPardonForm.cpp.i:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.i
+.PHONY : PresidentialPardonForm.cpp.i
+
+PresidentialPardonForm.s: PresidentialPardonForm.cpp.s
+
+.PHONY : PresidentialPardonForm.s
+
+# target to generate assembly for a file
+PresidentialPardonForm.cpp.s:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/PresidentialPardonForm.cpp.s
+.PHONY : PresidentialPardonForm.cpp.s
+
+RobotomyRequestForm.o: RobotomyRequestForm.cpp.o
+
+.PHONY : RobotomyRequestForm.o
+
+# target to build an object file
+RobotomyRequestForm.cpp.o:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.o
+.PHONY : RobotomyRequestForm.cpp.o
+
+RobotomyRequestForm.i: RobotomyRequestForm.cpp.i
+
+.PHONY : RobotomyRequestForm.i
+
+# target to preprocess a source file
+RobotomyRequestForm.cpp.i:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.i
+.PHONY : RobotomyRequestForm.cpp.i
+
+RobotomyRequestForm.s: RobotomyRequestForm.cpp.s
+
+.PHONY : RobotomyRequestForm.s
+
+# target to generate assembly for a file
+RobotomyRequestForm.cpp.s:
+	$(MAKE) -f CMakeFiles/d05_ex02.dir/build.make CMakeFiles/d05_ex02.dir/RobotomyRequestForm.cpp.s
+.PHONY : RobotomyRequestForm.cpp.s
+
 ShrubberyCreationForm.o: ShrubberyCreationForm.cpp.o
 
 .PHONY : ShrubberyCreationForm.o
@@ -246,6 +300,12 @@ help:
 	@echo "... Form.o"
 	@echo "... Form.i"
 	@echo "... Form.s"
+	@echo "... PresidentialPardonForm.o"
+	@echo "... PresidentialPardonForm.i"
+	@echo "... PresidentialPardonForm.s"
+	@echo "... RobotomyRequestForm.o"
+	@echo "... RobotomyRequestForm.i"
+	@echo "... RobotomyRequestForm.s"
 	@echo "... ShrubberyCreationForm.o"
 	@echo "... ShrubberyCreationForm.i"
 	@echo "... ShrubberyCreationForm.s"

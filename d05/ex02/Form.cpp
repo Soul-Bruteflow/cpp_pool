@@ -7,11 +7,11 @@
 
 /* Default constructor */
 Form::Form()
-:_name("NONAME"), _isSigned(false), _signGrade(1), _executeGrade(1)
+:_name("NONAME"), _target("NOTARGET"), _isSigned(false), _signGrade(1), _executeGrade(1)
 {}
 
-Form::Form(std::string name, unsigned int signGrade, unsigned int executeGrade)
-:_name(name), _signGrade(signGrade), _executeGrade(executeGrade)
+Form::Form(std::string name, std::string target, unsigned int signGrade, unsigned int executeGrade)
+:_name(name), _target(target), _signGrade(signGrade), _executeGrade(executeGrade)
 {
 	if (signGrade > 150 || executeGrade > 150)
 		throw Form::GradeTooLowException();
@@ -23,7 +23,7 @@ Form::Form(std::string name, unsigned int signGrade, unsigned int executeGrade)
 
 /* Copy constructor */
 Form::Form(Form const &src)
-:_name(src._name), _isSigned(src._isSigned), _signGrade(src._signGrade), _executeGrade(src._executeGrade)
+:_name(src._name), _target(src._target), _isSigned(src._isSigned), _signGrade(src._signGrade), _executeGrade(src._executeGrade)
 {}
 
 /* Default destructor */
@@ -40,11 +40,13 @@ Form &Form::operator=(Form const &rhs)
 
 std::ostream &	operator<<(std::ostream &stream, Form const & rhs) {
 
-	stream << "Form name: [" << rhs.getName()
-	<< "];\nForm state: [" << rhs.getSignState()
+	stream
+	<< "Form name: [" << rhs.getName()
+	<< "]\nForm target: [" << rhs.getTarget()
+	<< "]\nForm state: [" << rhs.getSignState()
 	<< "]\nForm sign grade: [" << rhs.getSignGrade()
 	<< "]\nForm execute grade: ["  << rhs.getExecuteGrade()
-	<<std::endl;
+	<< "]" << std::endl;
 	return stream;
 }
 
@@ -79,6 +81,11 @@ void Form::beSigned(Bureaucrat &bureaucrat)
 		throw Form::GradeTooLowException();
 	else
 		this->setSignState(true);
+}
+
+std::string Form::getTarget() const
+{
+	return _target;
 }
 
 Form::GradeTooLowException::GradeTooLowException()

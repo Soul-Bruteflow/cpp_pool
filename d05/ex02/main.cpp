@@ -6,124 +6,83 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
+
+void testSign(Bureaucrat &b, Form &f)
+{
+	try
+	{
+		b.signForm(f);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void testExecute(Bureaucrat &b, Form &f)
+{
+	try
+	{
+		b.executeForm(f);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
 
 int main()
 {
-	Bureaucrat hermes("Hermes Conrad");
-	unsigned int i;
+	std::cout << "\n* Form sign and execute tests. *\n";
 
-	std::cout << "\n* Grade increment test. *\n";
+    Bureaucrat b99("b99", 1);
+    Bureaucrat b100("b100", 150);
+    ShrubberyCreationForm s99("target1");
+    RobotomyRequestForm r99("target2");
+    PresidentialPardonForm p99("target3");
 
-	try
-	{
-		for (i = 0; i <= 151; i++)
-		{
-			std::cout << hermes;
-			hermes.incrementGrade(15);
-		}
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	std::cout << "\n* Bureaucrat b99. *\n";
+	std::cout << b99;
 
-	std::cout << "\n* Grade decrement test. *\n";
+	std::cout << "\n* Bureaucrat b100. *\n";
+	std::cout << b99;
 
-	try
-	{
-		for (i = 0; i <= 151; i++)
-		{
-			std::cout << hermes;
-			hermes.decrementGrade(15);
-		}
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	std::cout << "\n* Form s99. *\n";
+    std::cout << s99;
 
-	std::cout << "\n* Tests. *\n";
+	std::cout << "\n* Form r99. *\n";
+	std::cout << r99;
 
-	Bureaucrat b1;
-	std::cout << b1;
+	std::cout << "\n* Form p99. *\n";
+	std::cout << p99;
 
-	Bureaucrat b2(100);
-	std::cout << b2;
+	std::cout << "\n* Form s99 sign and execute. *\n";
+	testSign(b99, s99);
+	testExecute(b99, s99);
 
-	Bureaucrat b3("Barbados Slim", 1);
-	std::cout << b3;
+	std::cout << "\n* Form r99 sign and execute. *\n";
+	testSign(b99, r99);
+	testExecute(b99, r99);
+	testExecute(b99, r99);
+	testExecute(b99, r99);
+	testExecute(b99, r99);
 
-	Bureaucrat b4(b3);
-	std::cout << b4;
+	std::cout << "\n* Form p99 sign and execute. *\n";
+	testSign(b99, p99);
+	testExecute(b99, p99);
 
-	b4.setName("Barbados Slim 2");
-	b4.setGrade(2);
-	Bureaucrat b5 = b4;
-	std::cout << b5;
-
-	//////////////////////////////////
-//
-//	std::cout << "\n* Form Tests. *\n";
-//
-//	std::cout << "\n* Illegal Forms. *\n";
-//	try
-//	{
-//		Form f1("form_1", 0, 0);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-//
-//	try
-//	{
-//		Form f1("form_1", 151, 151);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-//
-//	std::cout << "\n* Form sign test. *\n";
-//	hermes.setGrade(50);
-//	std::cout << hermes;
-//
-//	Form f3("form_3", 50, 50);
-//	std::cout << f3;
-//
-//	try
-//	{
-//		hermes.signForm(f3);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-//
-//	std::cout << "\n* Illegal form sign test. *\n";
-//	try
-//	{
-//		hermes.signForm(f3);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-//
-//	Form f4("form_4", 10, 10);
-//	std::cout << f4;
-//	try
-//	{
-//		hermes.signForm(f4);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
-
-    Bureaucrat b99("99", 50);
-    ShrubberyCreationForm s99("s99");
-
-    s99.beSigned(b99);
-    s99.execute(b99);
+	std::cout << "\n* Illegal executes. *\n";
+	r99.setSignState(false);
+	p99.setSignState(false);
+	testSign(b100, s99);
+	s99.setSignState(false);
+	testSign(b100, s99);
+	testExecute(b100, s99);
+	testSign(b100, r99);
+	testExecute(b100, r99);
+	testSign(b100, p99);
+	testExecute(b100, p99);
 }

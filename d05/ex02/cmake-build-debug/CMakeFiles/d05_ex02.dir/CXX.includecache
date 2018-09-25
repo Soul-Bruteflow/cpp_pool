@@ -18,6 +18,18 @@ string
 Bureaucrat.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Bureaucrat.hpp
 
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/PresidentialPardonForm.hpp
+Form.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+string
+-
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/RobotomyRequestForm.hpp
+Form.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
+string
+-
+
 /Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/ShrubberyCreationForm.hpp
 Form.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
@@ -33,4 +45,8 @@ Form.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/Form.hpp
 ShrubberyCreationForm.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/ShrubberyCreationForm.hpp
+RobotomyRequestForm.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/RobotomyRequestForm.hpp
+PresidentialPardonForm.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d05/ex02/PresidentialPardonForm.hpp
 

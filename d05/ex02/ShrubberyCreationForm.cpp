@@ -8,16 +8,16 @@
 
 /* Default constructor */
 ShrubberyCreationForm::ShrubberyCreationForm()
-:Form("NONAME", 145, 137)
+:Form("Shrubbery Creation", "NOTARGET", 145, 137)
 {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
-:Form(target, 145, 137)
+:Form("Shrubbery Creation", target, 145, 137)
 {}
 
 /* Copy constructor */
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src)
-:Form(src.getName(), 145, 137)
+:Form("Shrubbery Creation", src.getTarget(), 145, 137)
 {}
 
 /* Default destructor */
@@ -35,7 +35,7 @@ ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	std::string		fileName = this->getName() + "_shrubbery";
+	std::string		fileName = this->getTarget() + "_shrubbery";
 	std::ofstream	stream(fileName);
 
 	if (executor.getGrade() <= 137 && this->getSignState())
@@ -54,7 +54,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 		"     |.|        | |         | |        \n"
 		"  (({   }))_|__{   }_//__(({   }_))__/_\n";
 		stream.close();
-		std::cout << "Bureaucrat [" << executor.getName() << "] executed Shrubbery Form [" << this->getName() << "]" << std::endl;
 	}
 	else if (!this->getSignState())
 	{

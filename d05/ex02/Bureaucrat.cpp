@@ -122,10 +122,35 @@ void Bureaucrat::signForm(Form &form)
 	}
 }
 
+void Bureaucrat::executeForm(Form const &form)
+{
+	if (!form.getSignState())
+	{
+		std::cout << "Error44: Bureaucrat [" << _name
+				  << "] can't execute the form [" << form.getName() << "]. It is not signed yet." << std::endl;
+		return;
+	}
+	else
+	{
+		try
+		{
+			form.execute(*this);
+			std::cout << "Bureaucrat [" << _name
+					  << "] executes [" << form.getName() << "] form." << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "Bureaucrat [" << _name << "] cannot execute [" << form.getName()
+					  << "] form. Because " << e.what() << std::endl;
+		}
+	}
+}
+
 std::ostream &	operator<<(std::ostream &stream, Bureaucrat const & rhs)
 {
 
-	stream << "Bureaucrat name: [" << rhs.getName() << "];\nBureaucrat grade: [" << rhs.getGrade() << "]" << std::endl;
+	stream << "Bureaucrat name: [" << rhs.getName()
+	<< "]\nBureaucrat grade: [" << rhs.getGrade() << "]" << std::endl;
 	return stream;
 }
 
