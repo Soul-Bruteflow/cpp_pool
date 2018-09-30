@@ -25,6 +25,8 @@ public:
 	Bureaucrat getSigner() const;
 	Bureaucrat getExecutor() const;
 
+	bool isOfficeBlockFilled() const;
+
 	/* Exceptions */
 	class NoInternException : public std::exception
 	{

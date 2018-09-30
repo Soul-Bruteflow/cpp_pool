@@ -88,7 +88,7 @@ void CentralBureaucracy::feedBureaucrat(Bureaucrat &bureaucrat)
 	if (_officesCount < 20 && _bureaucratsCount < 40)
 	{
 		_bureaucratsCount++;
-		if (_bureaucratsCount % 2)
+		if (_bureaucratsCount % 2 == 0)
 		{
 			_officeBlocks[_officesCount].setExecutor(bureaucrat);
 			_officesCount++;
@@ -113,5 +113,30 @@ void CentralBureaucracy::queueUp(std::string obj)
 
 void CentralBureaucracy::doBureaucracy()
 {
+	_generateInterns();
 
+	std::string forms[] = {
+	"shrubbery creation",
+	"robotomy request",
+	"presidential pardon"};
+
+	if (_targetsCount == 0)
+		std::cout << "Cannot do bureaucracy. No targets." << std::endl;
+	if (_officesCount != 20)
+		std::cout << "Cannot do bureaucracy. Offices are not filled completely." << std::endl;
+
+	unsigned int k = 0;
+	for (unsigned int i = 0; i < _targetsCount; i++)
+	{
+		if (_officeBlocks[k].isOfficeBlockFilled())
+		{
+			_officeBlocks[k].doBureaucracy(forms[rand() % 3], _targets[i]);
+
+			k++;
+			if (k >= 20)
+				k = 0;
+		}
+		else
+			std::cout << "Cannot do bureaucracy. No targets." << std::endl;
+	}
 }

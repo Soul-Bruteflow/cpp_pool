@@ -81,6 +81,14 @@ Bureaucrat OfficeBlock::getExecutor() const
 	return *_eBureaucrat;
 }
 
+bool OfficeBlock::isOfficeBlockFilled() const
+{
+	if (_intern && _sBureaucrat && _eBureaucrat)
+		return true;
+	else
+		return false;
+}
+
 OfficeBlock::NoInternException::NoInternException(){}
 
 OfficeBlock::NoInternException::NoInternException(
