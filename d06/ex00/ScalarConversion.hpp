@@ -32,6 +32,15 @@ public:
 		ImpossibleChar &operator=(ImpossibleChar const &rhs);
 		const char* what() const throw();
 	};
+	class NonDisplayableChar : public std::exception
+	{
+	public:
+		NonDisplayableChar();
+		NonDisplayableChar(NonDisplayableChar const &src);
+		~NonDisplayableChar() throw();
+		NonDisplayableChar &operator=(NonDisplayableChar const &rhs);
+		const char* what() const throw();
+	};
 	class ImpossibleInt : public std::exception
 	{
 	public:

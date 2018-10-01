@@ -13,6 +13,8 @@ string
 /Users/bruteflow/_projects/_unit/cpp_pool/d06/ex00/main.cpp
 iostream
 -
+iomanip
+-
 ScalarConversion.hpp
 /Users/bruteflow/_projects/_unit/cpp_pool/d06/ex00/ScalarConversion.hpp
 

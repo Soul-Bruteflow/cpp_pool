@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 #include "ScalarConversion.hpp"
 
 int main(int ac, char **av)
@@ -16,18 +17,71 @@ int main(int ac, char **av)
 	std::string tmp(av[1]);
 	ScalarConversion sc(tmp);
 
+	//Char
 	std::cout << "char: ";
-	try {
+	try
+	{
 		char c = static_cast<char>(sc);
-		std::cout << '\'' << c << '\'';
+		std::cout << '\'' << c << '\'' << std::endl;
+	}
+	catch (ScalarConversion::ImpossibleChar &e)
+	{
+		std::cout << e.what();
+	}
+	catch (ScalarConversion::NonDisplayableChar &e)
+	{
+		std::cout << e.what();
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << "error";
+	}
 
-		if (isprint(c))
-			std::cout << '\'' << c << '\'';
-		else
-			std::cout << "Non displayable";
+	// Int
+	std::cout << "int: ";
+	try
+	{
+		int c = static_cast<int>(sc);
+		std::cout << c << std::endl;
 	}
-	catch (std::exception) {
-		std::cout << "impossible";
+	catch (ScalarConversion::ImpossibleInt &e)
+	{
+		std::cout << e.what();
 	}
-	std::cout << std::endl;
+	catch (const std::exception &e)
+	{
+		std::cout << "error";
+	}
+
+	//Float
+	std::cout << "float: ";
+	try
+	{
+		float c = static_cast<float>(sc);
+		std::cout << std::fixed << std::setprecision(1) << c << 'f' << std::endl;
+	}
+	catch (ScalarConversion::ImpossibleFloat &e)
+	{
+		std::cout << e.what();
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << "error";
+	}
+
+	//Double
+	std::cout << "double: ";
+	try
+	{
+		double c = static_cast<double>(sc);
+		std::cout << c << std::endl;
+	}
+	catch (ScalarConversion::ImpossibleDouble &e)
+	{
+		std::cout << e.what();
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << "error";
+	}
 }
