@@ -9,7 +9,7 @@ Vec2ui::Vec2ui()
 :_x(0), _y(0)
 {}
 
-Vec2ui::Vec2ui(uint_fast8_t x, uint_fast8_t y)
+Vec2ui::Vec2ui(uint_fast16_t x, uint_fast16_t y)
 :_x(x), _y(y)
 {}
 
@@ -31,27 +31,27 @@ Vec2ui &Vec2ui::operator=(Vec2ui const &rhs)
 	return *this;
 }
 
-uint_fast8_t Vec2ui::getX() const
+uint_fast16_t Vec2ui::getX() const
 {
 	return _x;
 }
 
-uint_fast8_t Vec2ui::getY() const
+uint_fast16_t Vec2ui::getY() const
 {
 	return _y;
 }
 
-void Vec2ui::setX(uint_fast8_t x)
+void Vec2ui::setX(uint_fast16_t x)
 {
 	_x = x;
 }
 
-void Vec2ui::setY(uint_fast8_t y)
+void Vec2ui::setY(uint_fast16_t y)
 {
 	_y = y;
 }
 
-void Vec2ui::setXY(uint_fast8_t x, uint_fast8_t y)
+void Vec2ui::setXY(uint_fast16_t x, uint_fast16_t y)
 {
 	setX(x);
 	setY(y);

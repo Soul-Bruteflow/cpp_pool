@@ -9,7 +9,7 @@ Vec2i::Vec2i()
 :_x(0), _y(0)
 {}
 
-Vec2i::Vec2i(int_fast8_t x, int_fast8_t y)
+Vec2i::Vec2i(int_fast16_t x, int_fast16_t y)
 :_x(x), _y(y)
 {}
 
@@ -31,27 +31,27 @@ Vec2i &Vec2i::operator=(Vec2i const &rhs)
 	return *this;
 }
 
-int_fast8_t Vec2i::getX() const
+int_fast16_t Vec2i::getX() const
 {
 	return _x;
 }
 
-int_fast8_t Vec2i::getY() const
+int_fast16_t Vec2i::getY() const
 {
 	return _y;
 }
 
-void Vec2i::setX(int_fast8_t x)
+void Vec2i::setX(int_fast16_t x)
 {
 	_x = x;
 }
 
-void Vec2i::setY(int_fast8_t y)
+void Vec2i::setY(int_fast16_t y)
 {
 	_y = y;
 }
 
-void Vec2i::setXY(int_fast8_t x, int_fast8_t y)
+void Vec2i::setXY(int_fast16_t x, int_fast16_t y)
 {
 	setX(x);
 	setY(y);

@@ -85,6 +85,18 @@
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Game.cpp">
 			<Option target="rush00"/>
 		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Object.cpp">
+			<Option target="rush00"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/ObjectField.cpp">
+			<Option target="rush00"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Player.cpp">
+			<Option target="rush00"/>
+		</Unit>
+		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Rect.cpp">
+			<Option target="rush00"/>
+		</Unit>
 		<Unit filename="/Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Vec2i.cpp">
 			<Option target="rush00"/>
 		</Unit>

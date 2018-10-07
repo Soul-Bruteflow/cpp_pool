@@ -70,9 +70,61 @@ CMakeFiles/rush00.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rush00.dir/src/Game.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Game.cpp -o CMakeFiles/rush00.dir/src/Game.cpp.s
 
+CMakeFiles/rush00.dir/src/Object.cpp.o: CMakeFiles/rush00.dir/flags.make
+CMakeFiles/rush00.dir/src/Object.cpp.o: ../src/Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rush00.dir/src/Object.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/Object.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Object.cpp
+
+CMakeFiles/rush00.dir/src/Object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rush00.dir/src/Object.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Object.cpp > CMakeFiles/rush00.dir/src/Object.cpp.i
+
+CMakeFiles/rush00.dir/src/Object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rush00.dir/src/Object.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Object.cpp -o CMakeFiles/rush00.dir/src/Object.cpp.s
+
+CMakeFiles/rush00.dir/src/ObjectField.cpp.o: CMakeFiles/rush00.dir/flags.make
+CMakeFiles/rush00.dir/src/ObjectField.cpp.o: ../src/ObjectField.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rush00.dir/src/ObjectField.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/ObjectField.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/ObjectField.cpp
+
+CMakeFiles/rush00.dir/src/ObjectField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rush00.dir/src/ObjectField.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/ObjectField.cpp > CMakeFiles/rush00.dir/src/ObjectField.cpp.i
+
+CMakeFiles/rush00.dir/src/ObjectField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rush00.dir/src/ObjectField.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/ObjectField.cpp -o CMakeFiles/rush00.dir/src/ObjectField.cpp.s
+
+CMakeFiles/rush00.dir/src/Player.cpp.o: CMakeFiles/rush00.dir/flags.make
+CMakeFiles/rush00.dir/src/Player.cpp.o: ../src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rush00.dir/src/Player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/Player.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Player.cpp
+
+CMakeFiles/rush00.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rush00.dir/src/Player.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Player.cpp > CMakeFiles/rush00.dir/src/Player.cpp.i
+
+CMakeFiles/rush00.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rush00.dir/src/Player.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Player.cpp -o CMakeFiles/rush00.dir/src/Player.cpp.s
+
+CMakeFiles/rush00.dir/src/Rect.cpp.o: CMakeFiles/rush00.dir/flags.make
+CMakeFiles/rush00.dir/src/Rect.cpp.o: ../src/Rect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rush00.dir/src/Rect.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/Rect.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Rect.cpp
+
+CMakeFiles/rush00.dir/src/Rect.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rush00.dir/src/Rect.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Rect.cpp > CMakeFiles/rush00.dir/src/Rect.cpp.i
+
+CMakeFiles/rush00.dir/src/Rect.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rush00.dir/src/Rect.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Rect.cpp -o CMakeFiles/rush00.dir/src/Rect.cpp.s
+
 CMakeFiles/rush00.dir/src/Vec2i.cpp.o: CMakeFiles/rush00.dir/flags.make
 CMakeFiles/rush00.dir/src/Vec2i.cpp.o: ../src/Vec2i.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rush00.dir/src/Vec2i.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rush00.dir/src/Vec2i.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/Vec2i.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Vec2i.cpp
 
 CMakeFiles/rush00.dir/src/Vec2i.cpp.i: cmake_force
@@ -85,7 +137,7 @@ CMakeFiles/rush00.dir/src/Vec2i.cpp.s: cmake_force
 
 CMakeFiles/rush00.dir/src/Vec2ui.cpp.o: CMakeFiles/rush00.dir/flags.make
 CMakeFiles/rush00.dir/src/Vec2ui.cpp.o: ../src/Vec2ui.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rush00.dir/src/Vec2ui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rush00.dir/src/Vec2ui.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/Vec2ui.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/Vec2ui.cpp
 
 CMakeFiles/rush00.dir/src/Vec2ui.cpp.i: cmake_force
@@ -98,7 +150,7 @@ CMakeFiles/rush00.dir/src/Vec2ui.cpp.s: cmake_force
 
 CMakeFiles/rush00.dir/src/main.cpp.o: CMakeFiles/rush00.dir/flags.make
 CMakeFiles/rush00.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rush00.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rush00.dir/src/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rush00.dir/src/main.cpp.o -c /Users/bruteflow/_projects/_unit/cpp_pool/rush00/src/main.cpp
 
 CMakeFiles/rush00.dir/src/main.cpp.i: cmake_force
@@ -112,6 +164,10 @@ CMakeFiles/rush00.dir/src/main.cpp.s: cmake_force
 # Object files for target rush00
 rush00_OBJECTS = \
 "CMakeFiles/rush00.dir/src/Game.cpp.o" \
+"CMakeFiles/rush00.dir/src/Object.cpp.o" \
+"CMakeFiles/rush00.dir/src/ObjectField.cpp.o" \
+"CMakeFiles/rush00.dir/src/Player.cpp.o" \
+"CMakeFiles/rush00.dir/src/Rect.cpp.o" \
 "CMakeFiles/rush00.dir/src/Vec2i.cpp.o" \
 "CMakeFiles/rush00.dir/src/Vec2ui.cpp.o" \
 "CMakeFiles/rush00.dir/src/main.cpp.o"
@@ -120,12 +176,16 @@ rush00_OBJECTS = \
 rush00_EXTERNAL_OBJECTS =
 
 rush00: CMakeFiles/rush00.dir/src/Game.cpp.o
+rush00: CMakeFiles/rush00.dir/src/Object.cpp.o
+rush00: CMakeFiles/rush00.dir/src/ObjectField.cpp.o
+rush00: CMakeFiles/rush00.dir/src/Player.cpp.o
+rush00: CMakeFiles/rush00.dir/src/Rect.cpp.o
 rush00: CMakeFiles/rush00.dir/src/Vec2i.cpp.o
 rush00: CMakeFiles/rush00.dir/src/Vec2ui.cpp.o
 rush00: CMakeFiles/rush00.dir/src/main.cpp.o
 rush00: CMakeFiles/rush00.dir/build.make
 rush00: CMakeFiles/rush00.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable rush00"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/_projects/_unit/cpp_pool/rush00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable rush00"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rush00.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

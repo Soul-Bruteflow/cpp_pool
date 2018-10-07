@@ -150,6 +150,114 @@ src/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/Object.o: src/Object.cpp.o
+
+.PHONY : src/Object.o
+
+# target to build an object file
+src/Object.cpp.o:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Object.cpp.o
+.PHONY : src/Object.cpp.o
+
+src/Object.i: src/Object.cpp.i
+
+.PHONY : src/Object.i
+
+# target to preprocess a source file
+src/Object.cpp.i:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Object.cpp.i
+.PHONY : src/Object.cpp.i
+
+src/Object.s: src/Object.cpp.s
+
+.PHONY : src/Object.s
+
+# target to generate assembly for a file
+src/Object.cpp.s:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Object.cpp.s
+.PHONY : src/Object.cpp.s
+
+src/ObjectField.o: src/ObjectField.cpp.o
+
+.PHONY : src/ObjectField.o
+
+# target to build an object file
+src/ObjectField.cpp.o:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/ObjectField.cpp.o
+.PHONY : src/ObjectField.cpp.o
+
+src/ObjectField.i: src/ObjectField.cpp.i
+
+.PHONY : src/ObjectField.i
+
+# target to preprocess a source file
+src/ObjectField.cpp.i:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/ObjectField.cpp.i
+.PHONY : src/ObjectField.cpp.i
+
+src/ObjectField.s: src/ObjectField.cpp.s
+
+.PHONY : src/ObjectField.s
+
+# target to generate assembly for a file
+src/ObjectField.cpp.s:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/ObjectField.cpp.s
+.PHONY : src/ObjectField.cpp.s
+
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/Rect.o: src/Rect.cpp.o
+
+.PHONY : src/Rect.o
+
+# target to build an object file
+src/Rect.cpp.o:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Rect.cpp.o
+.PHONY : src/Rect.cpp.o
+
+src/Rect.i: src/Rect.cpp.i
+
+.PHONY : src/Rect.i
+
+# target to preprocess a source file
+src/Rect.cpp.i:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Rect.cpp.i
+.PHONY : src/Rect.cpp.i
+
+src/Rect.s: src/Rect.cpp.s
+
+.PHONY : src/Rect.s
+
+# target to generate assembly for a file
+src/Rect.cpp.s:
+	$(MAKE) -f CMakeFiles/rush00.dir/build.make CMakeFiles/rush00.dir/src/Rect.cpp.s
+.PHONY : src/Rect.cpp.s
+
 src/Vec2i.o: src/Vec2i.cpp.o
 
 .PHONY : src/Vec2i.o
@@ -243,6 +351,18 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/Object.o"
+	@echo "... src/Object.i"
+	@echo "... src/Object.s"
+	@echo "... src/ObjectField.o"
+	@echo "... src/ObjectField.i"
+	@echo "... src/ObjectField.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/Rect.o"
+	@echo "... src/Rect.i"
+	@echo "... src/Rect.s"
 	@echo "... src/Vec2i.o"
 	@echo "... src/Vec2i.i"
 	@echo "... src/Vec2i.s"

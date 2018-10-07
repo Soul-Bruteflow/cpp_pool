@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rush00.dir/src/Game.cpp.o"
+  "CMakeFiles/rush00.dir/src/Object.cpp.o"
+  "CMakeFiles/rush00.dir/src/ObjectField.cpp.o"
+  "CMakeFiles/rush00.dir/src/Player.cpp.o"
+  "CMakeFiles/rush00.dir/src/Rect.cpp.o"
   "CMakeFiles/rush00.dir/src/Vec2i.cpp.o"
   "CMakeFiles/rush00.dir/src/Vec2ui.cpp.o"
   "CMakeFiles/rush00.dir/src/main.cpp.o"

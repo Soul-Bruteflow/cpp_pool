@@ -6,6 +6,8 @@
 #define RUSH00_GAME_HPP
 
 #include <ncurses.h>
+#include "Player.hpp"
+#include "ObjectField.hpp"
 
 class Game
 {
@@ -21,7 +23,9 @@ public:
 	void		setWindow(WINDOW *window);
 
 private:
-	WINDOW* _wnd;
+	WINDOW*		_wnd;
+	Player		_player;
+	ObjectField _stars;
 
 };
 

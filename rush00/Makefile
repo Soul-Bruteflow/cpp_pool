@@ -3,8 +3,14 @@ SRC_DIR = ./src/
 OBJ_DIR = ./obj/
 INC_DIR = ./inc/
 
-OBJ	=	main.o \
-        Game.o
+OBJ	=	Game.o \
+        main.o \
+        Object.o \
+        ObjectField.o \
+        Player.o \
+        Rect.o \
+        Vec2i.o \
+        Vec2ui.o
 
 HEADERS	= $(INC_DIR)
 
@@ -20,7 +26,7 @@ RMF 	= rm -f
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
 	@mkdir -p obj
-	$(CXX) $(CFLAGS) $(GEN_OBJ) $(OBJ_OPT) $(INC_OPT)
+	$(CXX) $(GEN_OBJ) $(OBJ_OPT) $(INC_OPT)
 
 all: $(NAME)
 
