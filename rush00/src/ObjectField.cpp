@@ -49,8 +49,6 @@ void ObjectField::erase(size_t i)
 
 void ObjectField::update()
 {
-	// update existing object
-
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
 	{
 		if (_objects[i].getPosY() > _fieldBounds.bot())
@@ -65,12 +63,17 @@ void ObjectField::update()
 		if (_objects[i].isAlive())
 			_objects[i].update();
 	}
-//	for (size_t i = 0; i < MAX_OBJECTS; i++)
-//	{
-//		//if (_objects[i].getPosY() > _fieldBounds.bot())
-//		//erase(i);
-//		_objects[i].update();
-//	}
+}
+
+void ObjectField::bulletUpdate()
+{
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+		if (_objects[i].getPosY() < _fieldBounds.top())
+			erase(i);
+
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+		if (_objects[i].isAlive())
+			_objects[i].updateBullet();
 }
 
 Object* ObjectField::getData() const
@@ -153,6 +156,39 @@ void ObjectField::checkColision(Player *p)
 		if(player.getPosX() + 1 == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
 		{
 			erase(i);
+		}
+	}
+}
+
+void ObjectField::checkBulletCollision(ObjectField *hitable)
+{
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if (_objects[i].isAlive())
+		{
+			for (size_t j = 0; j < MAX_OBJECTS; j++)
+			{
+				if (_objects[i].getPosX() == hitable->_objects[j].getPosX() && _objects[i].getPosX() == hitable->_objects[j].getPosX())
+				{
+					erase(i);
+					hitable->erase(j);
+				}
+			}
+		}
+	}
+}
+
+void ObjectField::createBullet(int_fast16_t x, int_fast16_t y)
+{
+	Vec2i tmp(x, y);
+
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if (!_objects[i].isAlive())
+		{
+			_objects[i].setPos(tmp);
+			_objects[i].setIsAlive(true);
+			break;
 		}
 	}
 }

@@ -5,6 +5,7 @@
 #ifndef RUSH00_OBJECTFIELD_HPP
 #define RUSH00_OBJECTFIELD_HPP
 
+class Player;
 
 #include <cstddef>
 #include <vector>
@@ -12,6 +13,7 @@
 #include "Rect.hpp"
 #include "Player.hpp"
 #include <ncurses.h>
+
 
 #define MAX_OBJECTS 10
 
@@ -25,6 +27,7 @@ public:
 	ObjectField &operator=(ObjectField const &rhs);
 
 	void update();
+	void bulletUpdate();
 	void erase(size_t);
 	void setBounds(Rect);
 
@@ -36,6 +39,9 @@ public:
 	void generateAll();
 	void generate(size_t i);
 	void checkColision(Player *p);
+	void checkBulletCollision(ObjectField *hitable);
+
+	void createBullet(int_fast16_t x, int_fast16_t y);
 
 private:
 	Rect				_fieldBounds;

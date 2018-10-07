@@ -28,6 +28,7 @@ private:
 	Player		_player;
 	ObjectField _stars;
 	ObjectField _asteroids;
+	ObjectField _bullets;
 	Rect		_gameArea;
 	Rect		_screenArea;
 

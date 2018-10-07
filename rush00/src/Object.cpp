@@ -8,7 +8,7 @@
 
 /* Default constructor */
 Object::Object()
-:_pos(), _isAlive(true)
+:_pos(), _isAlive(false)
 {}
 
 Object::Object(int_fast16_t x, int_fast16_t y)
@@ -35,6 +35,11 @@ Object &Object::operator=(Object const &rhs)
 void Object::update()
 {
 	_pos.setY(_pos.getY() + static_cast<uint_fast16_t>(1));
+}
+
+void Object::updateBullet()
+{
+	_pos.setY(_pos.getY() - static_cast<uint_fast16_t>(1));
 }
 
 Vec2i Object::getPos() const

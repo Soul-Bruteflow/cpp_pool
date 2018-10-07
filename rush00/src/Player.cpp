@@ -9,7 +9,9 @@
 /* Default constructor */
 Player::Player()
 :_pos(), _model('O')
-{}
+{
+	//bullets = new ObjectField [MAX_OBJECTS];
+}
 
 /* Copy constructor */
 Player::Player(Player const &src)
@@ -78,3 +80,9 @@ void Player::setBounds(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uin
 {
 	bounds.setRect(oX, oY, bX, bY);
 }
+
+//void Player::shoot(ObjectField* bullets)
+//{
+//
+//	//bullets->createBullet(getPosX(), getPosY());
+//}

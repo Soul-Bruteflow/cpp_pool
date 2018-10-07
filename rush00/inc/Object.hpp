@@ -25,6 +25,7 @@ public:
 
 	bool	isAlive() const;
 	void	setIsAlive(bool state);
+	void 	updateBullet();
 
 private:
 	Vec2i	_pos;

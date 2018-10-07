@@ -5,8 +5,11 @@
 #ifndef RUSH00_PLAYER_HPP
 #define RUSH00_PLAYER_HPP
 
+class ObjectField;
+
 #include "Vec2i.hpp"
 #include "Rect.hpp"
+#include "ObjectField.hpp"
 
 class Player
 {
@@ -31,8 +34,10 @@ public:
 	void setPosY(int_fast16_t y);
 
 	void setBounds(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uint_fast16_t bY);
+	void shoot(ObjectField *bullets);
 
 	Rect	bounds;
+	//ObjectField *bullets;
 private:
 	Vec2i	_pos;
 	char	_model;

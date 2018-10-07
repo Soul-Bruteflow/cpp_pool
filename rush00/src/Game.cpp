@@ -82,6 +82,8 @@ void Game::run()
 
 	_asteroids.setBounds(_gameArea);
 	_stars.setBounds(_gameArea);
+	_bullets.setBounds(_gameArea);
+
 	_stars.generateAll();
 	_asteroids.generateAll();
 
@@ -144,6 +146,9 @@ void Game::run()
 				if(_player.getPosX() < _gameArea.right() - 2)
 					_player.setPosX((_player.getPosX() + static_cast<int_fast8_t >(1)));
 				break;
+			case ' ':
+				_bullets.createBullet(_player.getPosX(), _player.getPosY());
+				break;
 			default:
 				break;
 		}
@@ -155,14 +160,18 @@ void Game::run()
 		if(tick > 100 && tick % 20 == 0)
 			_asteroids.update();
 
+		_bullets.bulletUpdate();
+
 		_player.setBounds(_player.getPosX() - 1, _player.getPosY(), 3, 1);
 
+		//Draw
 		_stars.drawBackgroundObject('.', _gameWnd);
 		_asteroids.drawObject('*', _gameWnd);
+		_bullets.drawBackgroundObject('|', _gameWnd);
 
-		// remove asteroid if collided
-
+		// Collision
 		_asteroids.checkColision(&_player);
+		_bullets.checkBulletCollision(&_asteroids);
 
 
 		// draw player body
