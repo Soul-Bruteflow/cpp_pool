@@ -23,14 +23,16 @@ public:
 	void		setWindow(WINDOW *window);
 
 private:
-	WINDOW*		_mainWnd;
-	WINDOW*		_gameWnd;
-	Player		_player;
-	ObjectField _stars;
-	ObjectField _asteroids;
-	ObjectField _bullets;
-	Rect		_gameArea;
-	Rect		_screenArea;
+	WINDOW*			_mainWnd;
+	WINDOW*			_gameWnd;
+	Player			_player;
+	ObjectField 	_stars;
+	ObjectField 	_asteroids;
+	ObjectField 	_bullets;
+	Rect			_gameArea;
+	Rect			_screenArea;
+	unsigned int	_score;
+	int 			_lives;
 
 };
 

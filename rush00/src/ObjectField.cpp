@@ -133,34 +133,34 @@ void ObjectField::generate(size_t i)
 	_objects[i].setIsAlive(true);
 }
 
-void ObjectField::checkColision(Player *p)
+bool ObjectField::checkColision(Player *p)
 {
 	Player player = *p;
 
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
-	{
-		if(player.getPosX() == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		if((player.getPosX() == _objects[i].getPosX()) && (player.getPosY() == _objects[i].getPosY()))
 		{
 			erase(i);
+			return true;
 		}
-	}
+
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
-	{
-		if(player.getPosX() - 1 == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		if((player.getPosX() - 1 == _objects[i].getPosX()) && (player.getPosY() == _objects[i].getPosY()))
 		{
 			erase(i);
+			return true;
 		}
-	}
+
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
-	{
-		if(player.getPosX() + 1 == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		if((player.getPosX() + 1 == _objects[i].getPosX()) && (player.getPosY() == _objects[i].getPosY()))
 		{
 			erase(i);
+			return true;
 		}
-	}
+	return false;
 }
 
-void ObjectField::checkBulletCollision(ObjectField *hitable)
+bool ObjectField::checkBulletCollision(ObjectField *hitable)
 {
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
 	{
@@ -172,10 +172,12 @@ void ObjectField::checkBulletCollision(ObjectField *hitable)
 				{
 					erase(i);
 					hitable->erase(j);
+					return true;
 				}
 			}
 		}
 	}
+	return false;
 }
 
 void ObjectField::createBullet(int_fast16_t x, int_fast16_t y)

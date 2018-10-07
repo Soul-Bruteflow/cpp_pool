@@ -9,11 +9,13 @@
 #include <Rect.hpp>
 #include <zconf.h>
 #include <Vec2ui.hpp>
+#include <sstream>
 
 #include "Game.hpp"
 
 /* Default constructor */
 Game::Game()
+:_score(0), _lives(1)
 {
 	srand(time(0));
 	_mainWnd = initscr();
@@ -79,6 +81,7 @@ void Game::run()
 	// init character
 	_player.setModel('o');
 	_player.setPosition(10, 5);
+	_lives = 1;
 
 	_asteroids.setBounds(_gameArea);
 	_stars.setBounds(_gameArea);
@@ -115,6 +118,16 @@ void Game::run()
 		in_char = tolower(in_char);
 
 		mvaddch(_player.getPosY(), _player.getPosX(), ' ');
+
+
+		std::ostringstream sstream;
+		sstream << "Score: " << _score << " | " << "Lives: " << _lives;
+		std::string score = sstream.str();
+		const char *s = score.c_str();
+
+		mvwprintw(_gameWnd, 17, 2, s);
+
+		//mvaddch(10, 10, '@');
 
 		// controls switch
 		switch(in_char)
@@ -170,8 +183,16 @@ void Game::run()
 		_bullets.drawBackgroundObject('|', _gameWnd);
 
 		// Collision
-		_asteroids.checkColision(&_player);
-		_bullets.checkBulletCollision(&_asteroids);
+		if (_asteroids.checkColision(&_player))
+		{
+			_lives--;
+			if (_lives == 0)
+				game_over = true;
+		}
+		if(_bullets.checkBulletCollision(&_asteroids))
+		{
+			_score++;
+		}
 
 
 		// draw player body
@@ -203,100 +224,6 @@ void Game::run()
 		usleep(10000); // 10 ms
 	};
 }
-
-//	__player.setModel('0');
-//	__player.setPosition(10, 5);
-//
-//	int in_char;
-//	bool exit_requested = false;
-//
-//	// these will be used to initialize rect
-//	uint_fast16_t maxx, maxy;
-//
-//	// get window boundaries
-//	getmaxyx(_mainWnd, maxy, maxx);
-//
-//	//initialize our rect with 0 offset
-//	Rect _gameArea(0, 0, maxx, maxy);
-//	Rect _screenArea(0, 0, maxx, maxy);
-//
-//	Vec2ui cur_size;
-//
-//	//set our star bounds
-//	_stars.setBounds(_gameArea);
-//
-//	while(true)
-//	{
-//		in_char = wgetch(_mainWnd);
-//		mvaddch(__player.getPosY(), __player.getPosX(), ' ');
-//
-//		// this removes each object from it's previous position on the screen
-//		// by placing it with  a space on the screen instead
-//		// this will be replaced by a more efficent method late
-//
-//		_stars.clearObject();
-////		for (size_t i = 0; i < MAX_OBJECTS; i++)
-////		{
-////			Object *tmp = _stars.getData();
-////			if (tmp[i].isAlive())
-////				mvaddch(tmp[i].getPos().getY(), tmp[i].getPos().getX(), ' ');
-////		}
-////		for(auto s : _stars.getData())
-////		{
-////			mvaddch(s.getPos().getY(), s.getPos().getX(), ' ');
-////		}
-//
-//		_stars.update();
-//
-//		switch(in_char)
-//		{
-//			case 'q':
-//				exit_requested = true;
-//				break;
-//			case KEY_UP:
-//			case 'w':
-//				__player.setPosY((__player.getPosY() - static_cast<int_fast8_t >(1)));
-//				break;
-//			case KEY_DOWN:
-//			case 's':
-//				__player.setPosY((__player.getPosY() + static_cast<int_fast8_t >(1)));
-//				break;
-//			case KEY_LEFT:
-//			case 'a':
-//				__player.setPosX((__player.getPosX() - static_cast<int_fast8_t >(1)));
-//				break;
-//			case KEY_RIGHT:
-//			case 'd':
-//				__player.setPosX((__player.getPosX() + static_cast<int_fast8_t >(1)));
-//				break;
-//			default:
-//				break;
-//		}
-//
-//		mvaddch(__player.getPosY(), __player.getPosX(), __player.getModel());
-//
-//		_stars.drawObject();
-////		for (size_t i = 0; i < MAX_OBJECTS; i++)
-////		{
-////			Object *tmp = _stars.getData();
-////			if (tmp[i].isAlive())
-////				mvaddch(tmp[i].getPos().getY(), tmp[i].getPos().getX(), '*');
-////		}
-//
-////		for(auto s : _stars.getData())
-////		{
-////			// use getPos() to get position of stars
-////			// displays given character at given position on game window
-////			mvaddch(s.getPos().getY(), s.getPos().getX(), '*');
-////		}
-//
-//		if(exit_requested)
-//			break;
-//		usleep(10000); // wait for 1 ms
-//		refresh();
-//	}
-//}
-
 
 WINDOW *Game::getWindow() const
 {

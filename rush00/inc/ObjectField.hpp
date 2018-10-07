@@ -38,8 +38,8 @@ public:
 	void drawBackgroundObject(char c, WINDOW* wnd);
 	void generateAll();
 	void generate(size_t i);
-	void checkColision(Player *p);
-	void checkBulletCollision(ObjectField *hitable);
+	bool checkColision(Player *p);
+	bool checkBulletCollision(ObjectField *hitable);
 
 	void createBullet(int_fast16_t x, int_fast16_t y);
 
