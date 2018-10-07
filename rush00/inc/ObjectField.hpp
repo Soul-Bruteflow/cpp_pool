@@ -10,8 +10,10 @@
 #include <vector>
 #include "Object.hpp"
 #include "Rect.hpp"
+#include "Player.hpp"
+#include <ncurses.h>
 
-#define MAX_OBJECTS 100
+#define MAX_OBJECTS 10
 
 class ObjectField
 {
@@ -28,12 +30,15 @@ public:
 
 	Object* getData() const;
 
-	void clearObject();
-	void drawObject();
+	void clearObject(WINDOW* wnd);
+	void drawObject(char c, WINDOW* wnd);
+	void drawBackgroundObject(char c, WINDOW* wnd);
+	void generateAll();
+	void generate(size_t i);
+	void checkColision(Player *p);
 
 private:
 	Rect				_fieldBounds;
-	std::vector<Object> _objectSet;
 	Object 				*_objects;
 };
 

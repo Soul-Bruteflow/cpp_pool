@@ -70,4 +70,12 @@ bool Rect::contains(Vec2i a) const
 	&& (a.getY() >= _offset.getY() && a.getY() < bot());
 }
 
+void Rect::setRect(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uint_fast16_t bY)
+{
+	_offset.setX(oX);
+	_offset.setY(oY);
+	_bounds.setX(bX);
+	_bounds.setY(bY);
+}
+
 

@@ -3,7 +3,7 @@
 //
 
 #include <Player.hpp>
-
+#include "Rect.hpp"
 #include "Player.hpp"
 
 /* Default constructor */
@@ -72,4 +72,9 @@ void Player::setPosX(int_fast16_t x)
 void Player::setPosY(int_fast16_t y)
 {
 	_pos.setY(y);
+}
+
+void Player::setBounds(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uint_fast16_t bY)
+{
+	bounds.setRect(oX, oY, bX, bY);
 }

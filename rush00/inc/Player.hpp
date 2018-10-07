@@ -6,6 +6,7 @@
 #define RUSH00_PLAYER_HPP
 
 #include "Vec2i.hpp"
+#include "Rect.hpp"
 
 class Player
 {
@@ -29,9 +30,13 @@ public:
 	void setPosX(int_fast16_t x);
 	void setPosY(int_fast16_t y);
 
+	void setBounds(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uint_fast16_t bY);
+
+	Rect	bounds;
 private:
 	Vec2i	_pos;
 	char	_model;
+	int 	_energy;
 
 };
 

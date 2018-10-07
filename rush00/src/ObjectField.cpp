@@ -10,7 +10,7 @@
 
 /* Default constructor */
 ObjectField::ObjectField()
-:_fieldBounds(), _objectSet()
+:_fieldBounds()
 {
 	_objects = new Object [MAX_OBJECTS];
 }
@@ -43,44 +43,34 @@ void ObjectField::setBounds(Rect a)
 
 void ObjectField::erase(size_t i)
 {
-	//if (_objects[i].isAlive())
+	if (_objects[i].isAlive())
 		_objects[i].setIsAlive(false);
-	//_objectSet.erase(_objectSet.begin() + i);
 }
 
 void ObjectField::update()
 {
-	// update existing objects
+	// update existing object
+
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
 	{
 		if (_objects[i].getPosY() > _fieldBounds.bot())
-			erase(i);
-		_objects[i].update();
-	}
-
-//	for(size_t i = 0; i < _objectSet.size(); i++)
-//	{
-//		if(_objectSet.at(i).getPos().getY() > _fieldBounds.bot())
-//			_objectSet.erase(_objectSet.begin() + i);
-//
-//		_objectSet.at(i).update();
-//	}
-
-	for (size_t i = 0; i < MAX_OBJECTS; i++)
-	{
-		int a = rand() % MAX_OBJECTS;
-
-		if (!_objects[a].isAlive())
 		{
-			Object s(rand() % _fieldBounds.width(), 0);
-			_objects[i] = s;
-			_objects[i].setIsAlive(true);
+			erase(i);
+			generate(i);
 		}
 	}
 
-// spawn a new object
-//	Object s(rand() % _fieldBounds.width(), 0);
-//	_objectSet.push_back(s);
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if (_objects[i].isAlive())
+			_objects[i].update();
+	}
+//	for (size_t i = 0; i < MAX_OBJECTS; i++)
+//	{
+//		//if (_objects[i].getPosY() > _fieldBounds.bot())
+//		//erase(i);
+//		_objects[i].update();
+//	}
 }
 
 Object* ObjectField::getData() const
@@ -88,20 +78,81 @@ Object* ObjectField::getData() const
 	return _objects;
 }
 
-void ObjectField::clearObject()
+void ObjectField::clearObject(WINDOW* wnd)
 {
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
 	{
 		if (_objects[i].isAlive())
-			mvaddch(_objects[i].getPos().getY(), _objects[i].getPos().getX(), ' ');
+
+		{	wattron(wnd, A_BOLD);
+			mvwaddch(wnd, _objects[i].getPos().getY(), _objects[i].getPos().getX(), ' ');
+			wattron(wnd, A_BOLD);
+		}
 	}
 }
 
-void ObjectField::drawObject()
+void ObjectField::drawObject(char c, WINDOW* wnd)
 {
 	for (size_t i = 0; i < MAX_OBJECTS; i++)
 	{
 		if (_objects[i].isAlive())
-			mvaddch(_objects[i].getPos().getY(), _objects[i].getPos().getX(), '*');
+		{
+			wattron(wnd, A_BOLD);
+			mvwaddch(wnd,_objects[i].getPos().getY(), _objects[i].getPos().getX(), c);
+			wattron(wnd, A_BOLD);
+		}
+	}
+}
+
+void ObjectField::drawBackgroundObject(char c, WINDOW* wnd)
+{
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if (_objects[i].isAlive())
+			mvwaddch(wnd,_objects[i].getPos().getY(), _objects[i].getPos().getX(), c);
+	}
+}
+
+void ObjectField::generateAll()
+{
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		Object s(rand() % _fieldBounds.width(), rand() % -20);
+		_objects[i] = s;
+		_objects[i].setIsAlive(true);
+	}
+}
+
+void ObjectField::generate(size_t i)
+{
+	Object s(rand() % _fieldBounds.width(), 0);
+	_objects[i] = s;
+	_objects[i].setIsAlive(true);
+}
+
+void ObjectField::checkColision(Player *p)
+{
+	Player player = *p;
+
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if(player.getPosX() == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		{
+			erase(i);
+		}
+	}
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if(player.getPosX() - 1 == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		{
+			erase(i);
+		}
+	}
+	for (size_t i = 0; i < MAX_OBJECTS; i++)
+	{
+		if(player.getPosX() + 1 == _objects[i].getPosX() && player.getPosY() == _objects[i].getPosY())
+		{
+			erase(i);
+		}
 	}
 }

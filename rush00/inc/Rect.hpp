@@ -25,6 +25,8 @@ public:
 	uint_fast16_t height() const;
 	bool contains(Vec2i a) const;
 
+	void setRect(uint_fast16_t oX, uint_fast16_t oY, uint_fast16_t bX, uint_fast16_t bY);
+
 private:
 	Vec2i  _offset;
 	Vec2i  _bounds;
