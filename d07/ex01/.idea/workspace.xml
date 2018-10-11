@@ -2,16 +2,16 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="d07_ex00" targetName="d07_ex00" />
+      <config projectName="d07_ex01" targetName="d07_ex01" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1a74ea0-a95a-4bcd-9d4c-ec52f5d787da" name="Default Changelist" comment="" />
+    <list default="true" id="e600ad97-800c-4239-89da-c69037f46319" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,10 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FUSProjectUsageTrigger">
-    <session id="267298524">
+    <session id="70785020">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
@@ -43,14 +42,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="187" />
-          <entry key="txt" value="3" />
+          <entry key="cpp" value="268" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="3" />
-          <entry key="ObjectiveC" value="187" />
+          <entry key="CMakeLists.txt" value="2" />
+          <entry key="ObjectiveC" value="268" />
         </counts>
       </usages-collector>
     </session>
@@ -61,20 +60,20 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/whatever.cpp">
+        <entry file="file://$PROJECT_DIR$/iter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            <state relative-caret-position="378">
+              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding>
-                <element signature="e#73#85#0" expanded="true" />
-                <element signature="e#157#169#0" expanded="true" />
-                <element signature="e#221#233#0" expanded="true" />
+                <element signature="e#44#61#0" expanded="true" />
+                <element signature="e#91#103#0" expanded="true" />
+                <element signature="e#246#258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,7 +85,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/whatever.cpp" />
+        <option value="$PROJECT_DIR$/iter.cpp" />
       </list>
     </option>
   </component>
@@ -106,18 +105,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="d07_ex00" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex00" type="462c0819:PsiDirectoryNode" />
+              <item name="d07_ex01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,20 +138,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.d07_ex00">
+  <component name="RunManager" selected="Application.d07_ex01">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="d07_ex00" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="d07_ex00" TARGET_NAME="d07_ex00" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="d07_ex00" RUN_TARGET_NAME="d07_ex00">
+    <configuration name="d07_ex01" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="d07_ex01" TARGET_NAME="d07_ex01" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="d07_ex01" RUN_TARGET_NAME="d07_ex01">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.d07_ex00" />
+      <item itemvalue="Application.d07_ex01" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -160,17 +159,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1a74ea0-a95a-4bcd-9d4c-ec52f5d787da" name="Default Changelist" comment="" />
-      <created>1539241586748</created>
+      <changelist id="e600ad97-800c-4239-89da-c69037f46319" name="Default Changelist" comment="" />
+      <created>1539242677642</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1539241586748</updated>
-      <workItem from="1539241588155" duration="608000" />
+      <updated>1539242677642</updated>
+      <workItem from="1539242678875" duration="1044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="608000" />
+    <option name="totallyTimeSpent" value="1044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="0" />
@@ -179,15 +178,15 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" weight="0.32996634" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" weight="0.32996634" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32996634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32996634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -208,18 +207,18 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whatever.cpp">
+    <entry file="file://$PROJECT_DIR$/iter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        <state relative-caret-position="378">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
-            <element signature="e#73#85#0" expanded="true" />
-            <element signature="e#157#169#0" expanded="true" />
-            <element signature="e#221#233#0" expanded="true" />
+            <element signature="e#44#61#0" expanded="true" />
+            <element signature="e#91#103#0" expanded="true" />
+            <element signature="e#246#258#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d07/ex01/iter.cpp
+string
+-
+iostream
+-
+iomanip
+-
+
