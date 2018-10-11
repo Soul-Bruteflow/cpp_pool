@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d08/ex02/main.cpp
+iostream
+-
+list
+-
+mutantstack.hpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d08/ex02/mutantstack.hpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d08/ex02/mutantstack.hpp
+list
+-
+stack
+-
+
