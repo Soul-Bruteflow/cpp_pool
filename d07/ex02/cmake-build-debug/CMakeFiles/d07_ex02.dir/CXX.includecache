@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d07/ex02/Array.tpp
+
+/Users/bruteflow/_projects/_unit/cpp_pool/d07/ex02/main.cpp
+iostream
+-
+Array.tpp
+/Users/bruteflow/_projects/_unit/cpp_pool/d07/ex02/Array.tpp
+
